@@ -1,13 +1,51 @@
+#example configuration  https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/
 project:
   type: website
 
 website:
   title: "Herbarium Documentation"
-  navbar:
-    left:
+#  navbar:
+#    left:
+#      - href: index.qmd
+#        text: Home
+  page-navigation: true
+  site-url: "https://biodiversity-cz.github.io/herbarium-documentation"
+  repo-url: https://github.com/biodiversity-cz/herbarium-documentation
+  repo-actions: [edit, issue]
+
+  page-footer:
+#    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "CC-BY Biodiversity.cz, 2025"
+
+  sidebar:
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: globe
+        href: https://herbarium.biodiversity.cz
+        text: "Biodiversity.cz"
+      - icon: github
+        href: https://github.com/biodiversity-cz/herbarium-repository
+        text: "Quarto website tutorial"
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
       - href: index.qmd
-        text: Home
+        text: Welcome
+      - section: docs/introduction/index.qmd
+        contents:
+          - docs/introduction/01.qmd
+          - docs/introduction/10.qmd
+      - docs/metadata/index.qmd
 
 format:
   html:
     theme: cosmo
+#    toc: true
+#    toc-depth: 2
+#    toc-expand: 2
+#    toc-title: Contents
+#    toc-location: left
