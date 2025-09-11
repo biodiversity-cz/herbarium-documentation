@@ -20,11 +20,10 @@ jobs:
       - name: Install R packages
         run: Rscript -e 'install.packages(c("httr2","jsonlite","ggplot2", "rmarkdown"))'
 
-      - name: Render site
-        run: quarto render
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+
