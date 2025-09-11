@@ -4,10 +4,6 @@ on:
   push:
     branches: [ main ]
 
-permissions:
-   contents: write
-   pages: write
-
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -30,9 +26,9 @@ jobs:
             rmarkdown
 
       - name: Publish to GitHub Pages (and render)
-#        uses: quarto-dev/quarto-actions/publish@v2
-        run: |
-          quarto publish gh-pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
