@@ -4,8 +4,6 @@ on:
   push:
     branches: [ main ]
 
-
-# you need these permissions to publish to GitHub pages
 permissions:
    contents: write
    pages: write
@@ -32,9 +30,9 @@ jobs:
             rmarkdown
 
       - name: Publish to GitHub Pages (and render)
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
+#        uses: quarto-dev/quarto-actions/publish@v2
+        run: |
+          quarto publish gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
