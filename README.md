@@ -3,7 +3,7 @@ Documentation for EOSC CZ repository herbarium.biodiversity.cz
 
 
 ```shell
-quarto preview
+quarto preview # to see it local
 
-quarto publish gh-pages #only the very first time
+quarto publish gh-pages #unless the CI will start to work
 ```
