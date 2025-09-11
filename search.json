@@ -1,0 +1,55 @@
+[
+  {
+    "objectID": "docs/introduction/10.html",
+    "href": "docs/introduction/10.html",
+    "title": "Software used in Czech",
+    "section": "",
+    "text": "Níže se načtou data z veřejného API a vykreslí graf:\n\nlibrary(httr2)\nlibrary(jsonlite)\nlibrary(ggplot2)\n\n# příklad: načtení informací o repozitáři Quarto z GitHub API\nresp &lt;- request(\"https://api.github.com/repos/quarto-dev/quarto-cli\") |&gt;\n  req_perform() |&gt;\n  resp_body_json()\n\nstars &lt;- resp$stargazers_count\nforks &lt;- resp$forks_count\n\ndf &lt;- data.frame(\n  metric = c(\"Stars\", \"Forks\"),\n  count = c(stars, forks)\n)\n\nggplot(df, aes(metric, count, fill = metric)) +\n  geom_col() +\n  theme_minimal()",
+    "crumbs": [
+      "Introduction",
+      "Software used in Czech"
+    ]
+  },
+  {
+    "objectID": "docs/introduction/10.html#ukázka-načtení-dat-z-api",
+    "href": "docs/introduction/10.html#ukázka-načtení-dat-z-api",
+    "title": "Software used in Czech",
+    "section": "",
+    "text": "Níže se načtou data z veřejného API a vykreslí graf:\n\nlibrary(httr2)\nlibrary(jsonlite)\nlibrary(ggplot2)\n\n# příklad: načtení informací o repozitáři Quarto z GitHub API\nresp &lt;- request(\"https://api.github.com/repos/quarto-dev/quarto-cli\") |&gt;\n  req_perform() |&gt;\n  resp_body_json()\n\nstars &lt;- resp$stargazers_count\nforks &lt;- resp$forks_count\n\ndf &lt;- data.frame(\n  metric = c(\"Stars\", \"Forks\"),\n  count = c(stars, forks)\n)\n\nggplot(df, aes(metric, count, fill = metric)) +\n  geom_col() +\n  theme_minimal()",
+    "crumbs": [
+      "Introduction",
+      "Software used in Czech"
+    ]
+  },
+  {
+    "objectID": "docs/introduction/01.html",
+    "href": "docs/introduction/01.html",
+    "title": "Czech Herbaria",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "Introduction",
+      "Czech Herbaria"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/index.html",
+    "href": "docs/metadata/index.html",
+    "title": "Metadata model of the repository",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "Metadata model of the repository"
+    ]
+  },
+  {
+    "objectID": "docs/introduction/index.html",
+    "href": "docs/introduction/index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "Introduction"
+    ]
+  }
+]

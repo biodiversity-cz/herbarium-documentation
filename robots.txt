@@ -1,0 +1,1 @@
+Sitemap: https://biodiversity-cz.github.io/herbarium-documentation/sitemap.xml
