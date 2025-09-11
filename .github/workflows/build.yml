@@ -18,7 +18,15 @@ jobs:
         uses: r-lib/actions/setup-r@v2
 
       - name: Install R packages
-        run: Rscript -e 'install.packages(c("httr2","jsonlite","ggplot2", "rmarkdown"))'
+#        run: Rscript -e 'install.packages(c("httr2","jsonlite","ggplot2", "rmarkdown"))'
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+          extra-packages: |
+            ggplot2
+            httr2
+            jsonlite
+            rmarkdown
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
