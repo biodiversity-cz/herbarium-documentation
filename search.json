@@ -2,23 +2,12 @@
   {
     "objectID": "docs/introduction/10.html",
     "href": "docs/introduction/10.html",
-    "title": "Software used in Czech",
+    "title": "Software used in Czech herbaria",
     "section": "",
-    "text": "Níže se načtou data z veřejného API a vykreslí graf:\n\nlibrary(httr2)\nlibrary(jsonlite)\nlibrary(ggplot2)\n\n# příklad: načtení informací o repozitáři Quarto z GitHub API\nresp &lt;- request(\"https://api.github.com/repos/quarto-dev/quarto-cli\") |&gt;\n  req_perform() |&gt;\n  resp_body_json()\n\nstars &lt;- resp$stargazers_count\nforks &lt;- resp$forks_count\n\ndf &lt;- data.frame(\n  metric = c(\"Stars\", \"Forks\"),\n  count = c(stars, forks)\n)\n\nggplot(df, aes(metric, count, fill = metric)) +\n  geom_col() +\n  theme_minimal()",
+    "text": "JACQ\nMuseion\nDEMUS\nHerbman\n?Bach\nZlínský kraj",
     "crumbs": [
       "Introduction",
-      "Software used in Czech"
-    ]
-  },
-  {
-    "objectID": "docs/introduction/10.html#ukázka-načtení-dat-z-api",
-    "href": "docs/introduction/10.html#ukázka-načtení-dat-z-api",
-    "title": "Software used in Czech",
-    "section": "",
-    "text": "Níže se načtou data z veřejného API a vykreslí graf:\n\nlibrary(httr2)\nlibrary(jsonlite)\nlibrary(ggplot2)\n\n# příklad: načtení informací o repozitáři Quarto z GitHub API\nresp &lt;- request(\"https://api.github.com/repos/quarto-dev/quarto-cli\") |&gt;\n  req_perform() |&gt;\n  resp_body_json()\n\nstars &lt;- resp$stargazers_count\nforks &lt;- resp$forks_count\n\ndf &lt;- data.frame(\n  metric = c(\"Stars\", \"Forks\"),\n  count = c(stars, forks)\n)\n\nggplot(df, aes(metric, count, fill = metric)) +\n  geom_col() +\n  theme_minimal()",
-    "crumbs": [
-      "Introduction",
-      "Software used in Czech"
+      "Software used in Czech herbaria"
     ]
   },
   {
@@ -26,20 +15,30 @@
     "href": "docs/introduction/01.html",
     "title": "Czech Herbaria",
     "section": "",
-    "text": "tbd",
+    "text": "value of herbarium\norganisation forms (museum, university, cas.cz, ..)",
     "crumbs": [
       "Introduction",
       "Czech Herbaria"
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Herbarium Documentation",
+    "section": "",
+    "text": "This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science UK, Prague.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
     "objectID": "docs/metadata/index.html",
     "href": "docs/metadata/index.html",
-    "title": "Metadata model of the repository",
+    "title": "Metadata model of the herabrium.biodiversity.cz repository items",
     "section": "",
     "text": "tbd",
     "crumbs": [
-      "Metadata model of the repository"
+      "Metadata model of the herabrium.biodiversity.cz repository items"
     ]
   },
   {
@@ -47,7 +46,7 @@
     "href": "docs/introduction/index.html",
     "title": "Introduction",
     "section": "",
-    "text": "tbd",
+    "text": "EOSC\nNRP\nbiodiversity.cz\nherbarium.biodiversity.cz",
     "crumbs": [
       "Introduction"
     ]
