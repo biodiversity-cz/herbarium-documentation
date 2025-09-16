@@ -1,0 +1,10 @@
+---
+title: "Software used in Czech herbaria"
+---
+
+- JACQ
+- Museion
+- DEMUS
+- Herbman
+- ?Bach
+- Zlínský kraj

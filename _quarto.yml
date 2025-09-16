@@ -26,8 +26,8 @@ website:
         href: https://herbarium.biodiversity.cz
         text: "Biodiversity.cz"
       - icon: github
-        href: https://github.com/biodiversity-cz/herbarium-repository
-        text: "Quarto website tutorial"
+        href: https://github.com/biodiversity-cz/jacq-cz-repository
+        text: "Herbarium repository source code"
 
     style: "docked"
     search: true

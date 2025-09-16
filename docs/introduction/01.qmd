@@ -1,0 +1,6 @@
+---
+title: "Czech Herbaria"
+---
+
+- value of herbarium
+- organisation forms (museum, university, cas.cz, ..)
