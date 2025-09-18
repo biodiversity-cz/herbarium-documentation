@@ -127,7 +127,6 @@ Lists available metadata formats.
 
 ```
 GET /oai-pmh?verb=ListMetadataFormats
-GET /oai-pmh?verb=ListMetadataFormats&identifier=oai:domain:photo-123
 ```
 
 #### 3. ListSets
