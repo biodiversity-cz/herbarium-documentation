@@ -1,0 +1,173 @@
+---
+title: "OAI-PMH"
+---
+
+# OAI-PMH v2.0 Compliance Verification
+
+## 1. Mandatory Verbs Implementation
+
+- **Identify**: Returns repository information and policies
+- **ListMetadataFormats**: Returns available metadata formats
+- **ListSets**: Returns available sets (herbaria)
+- **ListIdentifiers**: Returns record headers with optional filtering
+- **ListRecords**: Returns complete records with optional filtering
+- **GetRecord**: Returns a single record by identifier
+
+## 2. Required Elements
+
+- **repositoryName**: "herbarium.biodiversity.cz"
+- **baseURL**: Dynamically generated from current request
+- **protocolVersion**: "2.0"
+- **adminEmail**: Configurable (default: novotp@natur.cuni.cz)
+- **earliestDatestamp**: Calculated from earliest public record
+- **deletedRecord**: "no" (we don't track deletions)
+- **granularity**: "YYYY-MM-DDThh:mm:ssZ"
+
+## 3. Metadata Format Support
+
+### Dublin Core (oai_dc) - Mandatory Format
+- **Prefix**: `oai_dc`
+- **Namespace**: `http://www.openarchives.org/OAI/2.0/oai_dc/`
+- **Schema**: `http://www.openarchives.org/OAI/2.0/oai_dc.xsd`
+- **All 15 Dublin Core elements mapped**:
+    - **dc:title**: Specimen identifier as title
+    - **dc:creator**: Herbarium name
+    - **dc:subject**: Classification terms (botanical collection, digital image)
+    - **dc:description**: Technical details and image information
+    - **dc:publisher**: Herbarium as publisher
+    - **dc:date**: Creation and modification dates
+    - **dc:type**: Resource type (Image, StillImage)
+    - **dc:format**: MIME types (TIFF, JP2)
+    - **dc:identifier**: Multiple identifiers (OAI, JACQ PID, specimen ID)
+    - **dc:source**: Archive filename
+    - **dc:language**: Latin (for botanical specimens)
+    - **dc:relation**: IIIF URLs
+    - **dc:coverage**: Geographic information
+    - **dc:rights**: License information
+
+### CCMM Format - Additional Format TBD
+- **Prefix**: `ccmm`
+- **Placeholder implementation ready for extension**
+    - Basic structure in place
+    - Institution information
+    - Digital object metadata
+    - Temporal information
+    - Ready for taxonomic and collection event data
+
+## 4. Error Handling Compliance
+
+- **badArgument**: Invalid or missing parameters
+- **badResumptionToken**: Invalid resumption token
+- **badVerb**: Unsupported verb
+- **cannotDisseminateFormat**: Unsupported metadata format
+- **idDoesNotExist**: Record not found
+- **noRecordsMatch**: Handled by empty result sets
+- **noMetadataFormats**: N/A (we support metadata formats)
+- **noSetHierarchy**: N/A (we have sets)
+
+
+## 5. HTTP and XML Compliance
+
+- **HTTP GET/POST**: Supported via framework
+- **Content-Type**: `application/xml; charset=utf-8`
+- **XML Declaration**: UTF-8 encoding specified
+- **Namespaces**: Proper OAI-PMH and metadata format namespaces
+- **Schema Location**: XSD references included
+
+## 6. Date and Time ISO 8601 Compliance
+
+- **Format**: YYYY-MM-DDThh:mm:ssZ (UTC)
+- **Granularity**: Supports both date and datetime formats
+- **Parsing**: Multiple format support for backward compatibility
+- **Output**: Consistent UTC format with Z suffix
+
+## 7. Sets Implementation
+
+- **Sets**: Herbaria as natural sets
+- **setSpec**: Herbarium acronym (e.g., "PRC", "BRNU")
+- **setName**: Full herbarium name
+- **Filtering**: Records can be filtered by herbarium
+
+## 8. Required Record Elements Compliance
+
+- **Header**:
+  - identifier: oai:domain:photo-{id} format
+  - datestamp: ISO 8601 UTC format
+  - setSpec: Herbarium acronym
+- **Metadata**: Format-specific content wrapped in metadata element
+- **About**: Not implemented (optional element)
+
+## 9. Resumption Token Implementation
+
+- **Token Format**: Base64-encoded JSON
+- **Parameters**: Preserves metadataPrefix, from, until, set
+- **Attributes**: cursor, completeListSize when appropriate
+- **Pagination**: Configurable page size (default: 100)
+- **Expiration**: Implicit via parameter validation
+
+
+## API Endpoints
+
+### Base URL
+```
+https://herbarium.biodiversity.cz/oai-pmh
+```
+
+### Supported Verbs
+
+#### 1. Identify
+Returns repository information and policies.
+
+```
+GET /oai-pmh?verb=Identify
+```
+
+#### 2. ListMetadataFormats
+Lists available metadata formats.
+
+```
+GET /oai-pmh?verb=ListMetadataFormats
+GET /oai-pmh?verb=ListMetadataFormats&identifier=oai:domain:photo-123
+```
+
+#### 3. ListSets
+Lists available sets (herbaria).
+
+```
+GET /oai-pmh?verb=ListSets
+```
+
+#### 4. ListIdentifiers
+Lists record identifiers with optional filtering.
+
+```
+GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc
+GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&from=2023-01-01
+GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&set=PRC
+```
+
+#### 5. ListRecords
+Lists complete records with optional filtering.
+
+```
+GET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc
+GET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc&from=2023-01-01&until=2023-12-31
+```
+
+#### 6. GetRecord
+Retrieves a single record by identifier.
+
+```
+GET /oai-pmh?verb=GetRecord&identifier=oai:domain:photo-123&metadataPrefix=oai_dc
+```
+
+## Error Handling
+
+Complete OAI-PMH error code support:
+
+- **badArgument**: Invalid or missing parameters
+- **badResumptionToken**: Invalid resumption token
+- **badVerb**: Unsupported verb
+- **cannotDisseminateFormat**: Unsupported metadata format
+- **idDoesNotExist**: Record not found
+

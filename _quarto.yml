@@ -39,7 +39,10 @@ website:
         contents:
           - docs/introduction/01.qmd
           - docs/introduction/10.qmd
-      - docs/metadata/index.qmd
+      - section: docs/metadata/index.qmd
+        contents:
+          - docs/metadata/OAI-PMH.qmd
+#      - docs/metadata/index.qmd
 
 format:
   html:
