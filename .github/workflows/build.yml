@@ -19,6 +19,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure Git safe directory
+        run: |
+          git config --global --add safe.directory /__w/herbarium-documentation/herbarium-documentation
+
       - name: Install R packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
