@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install R packages
         uses: r-lib/actions/setup-r-dependencies@v2
@@ -26,6 +28,23 @@ jobs:
             httr2
             jsonlite
             rmarkdown
+
+      - name: Configure Git user
+        run: |
+          git config --global user.email "quarto-github-actions-publish@example.com"
+          git config --global user.name "Quarto GHA Workflow Runner"
+
+      - name: Ensure gh-pages branch exists
+        run: |
+          git fetch origin
+          if ! git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+            echo "Creating gh-pages branch"
+            git checkout -b gh-pages
+            git push -u origin gh-pages
+            git checkout main
+          else
+            echo "gh-pages branch exists"
+          fi
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
