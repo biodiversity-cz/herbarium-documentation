@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Czech Herbaria – Herbarium Documentation</title>
+<title>OAI-PMH – Herbarium Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,22 +29,23 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../docs/metadata/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c43b3bc1fcb385a5114bbfd7c205505e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-97733a8ea5fc01a894890b48a54654e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -70,39 +71,16 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-sidebar docked fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Herbarium Documentation</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Czech Herbaria</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/metadata/index.html">Metadata</a></li><li class="breadcrumb-item"><a href="../../docs/metadata/OAI-PMH.html">OAI-PMH</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -112,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
@@ -121,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
       </a>
       <div class="sidebar-tools-main">
     <a href="https://herbarium.biodiversity.cz" title="Biodiversity.cz" class="quarto-navigation-tool px-1" aria-label="Biodiversity.cz"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/biodiversity-cz/herbarium-repository" title="Quarto website tutorial" class="quarto-navigation-tool px-1" aria-label="Quarto website tutorial"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/biodiversity-cz/jacq-cz-repository" title="Herbarium repository source code" class="quarto-navigation-tool px-1" aria-label="Herbarium repository source code"><i class="bi bi-github"></i></a>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -139,47 +117,56 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">docs/Seindex.qmd</span></a>
+            <a href="../../docs/introduction/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">quarto-workflows/browser.md</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">quarto-workflows/rstudio.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">quarto-workflows/jupyter.md</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
- <span class="menu-text">learning-more.qmd</span>
-  </li>
-        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../transition-from-rmarkdown.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Transition from Rmd</span></a>
+  <a href="../../docs/introduction/01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Czech Herbaria</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/introduction/10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Software used in Czech herbaria</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/metadata/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/metadata/OAI-PMH.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">OAI-PMH</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
-    
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/metadata/index.html">Metadata</a></li><li class="breadcrumb-item"><a href="../../docs/metadata/OAI-PMH.html">OAI-PMH</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Czech Herbaria</h1>
+<h1 class="title">OAI-PMH</h1>
 </div>
 
 
@@ -196,9 +183,194 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>tbd</p>
+<section id="oai-pmh-v2.0-compliance-verification" class="level1">
+<h1>OAI-PMH v2.0 Compliance Verification</h1>
+<section id="mandatory-verbs-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="mandatory-verbs-implementation">1. Mandatory Verbs Implementation</h2>
+<ul>
+<li><strong>Identify</strong>: Returns repository information and policies</li>
+<li><strong>ListMetadataFormats</strong>: Returns available metadata formats</li>
+<li><strong>ListSets</strong>: Returns available sets (herbaria)</li>
+<li><strong>ListIdentifiers</strong>: Returns record headers with optional filtering</li>
+<li><strong>ListRecords</strong>: Returns complete records with optional filtering</li>
+<li><strong>GetRecord</strong>: Returns a single record by identifier</li>
+</ul>
+</section>
+<section id="required-elements" class="level2">
+<h2 class="anchored" data-anchor-id="required-elements">2. Required Elements</h2>
+<ul>
+<li><strong>repositoryName</strong>: “herbarium.biodiversity.cz”</li>
+<li><strong>baseURL</strong>: Dynamically generated from current request</li>
+<li><strong>protocolVersion</strong>: “2.0”</li>
+<li><strong>adminEmail</strong>: Configurable (default: novotp@natur.cuni.cz)</li>
+<li><strong>earliestDatestamp</strong>: Calculated from earliest public record</li>
+<li><strong>deletedRecord</strong>: “no” (we don’t track deletions)</li>
+<li><strong>granularity</strong>: “YYYY-MM-DDThh:mm:ssZ”</li>
+</ul>
+</section>
+<section id="metadata-format-support" class="level2">
+<h2 class="anchored" data-anchor-id="metadata-format-support">3. Metadata Format Support</h2>
+<section id="dublin-core-oai_dc---mandatory-format" class="level3">
+<h3 class="anchored" data-anchor-id="dublin-core-oai_dc---mandatory-format">Dublin Core (oai_dc) - Mandatory Format</h3>
+<ul>
+<li><strong>Prefix</strong>: <code>oai_dc</code></li>
+<li><strong>Namespace</strong>: <code>http://www.openarchives.org/OAI/2.0/oai_dc/</code></li>
+<li><strong>Schema</strong>: <code>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</code></li>
+<li><strong>All 15 Dublin Core elements mapped</strong>:
+<ul>
+<li><strong>dc:title</strong>: Specimen identifier as title</li>
+<li><strong>dc:creator</strong>: Herbarium name</li>
+<li><strong>dc:subject</strong>: Classification terms (botanical collection, digital image)</li>
+<li><strong>dc:description</strong>: Technical details and image information</li>
+<li><strong>dc:publisher</strong>: Herbarium as publisher</li>
+<li><strong>dc:date</strong>: Creation and modification dates</li>
+<li><strong>dc:type</strong>: Resource type (Image, StillImage)</li>
+<li><strong>dc:format</strong>: MIME types (TIFF, JP2)</li>
+<li><strong>dc:identifier</strong>: Multiple identifiers (OAI, JACQ PID, specimen ID)</li>
+<li><strong>dc:source</strong>: Archive filename</li>
+<li><strong>dc:language</strong>: Latin (for botanical specimens)</li>
+<li><strong>dc:relation</strong>: IIIF URLs</li>
+<li><strong>dc:coverage</strong>: Geographic information</li>
+<li><strong>dc:rights</strong>: License information</li>
+</ul></li>
+</ul>
+</section>
+<section id="ccmm-format---additional-format-tbd" class="level3">
+<h3 class="anchored" data-anchor-id="ccmm-format---additional-format-tbd">CCMM Format - Additional Format TBD</h3>
+<ul>
+<li><strong>Prefix</strong>: <code>ccmm</code></li>
+<li><strong>Placeholder implementation ready for extension</strong>
+<ul>
+<li>Basic structure in place</li>
+<li>Institution information</li>
+<li>Digital object metadata</li>
+<li>Temporal information</li>
+<li>Ready for taxonomic and collection event data</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="error-handling-compliance" class="level2">
+<h2 class="anchored" data-anchor-id="error-handling-compliance">4. Error Handling Compliance</h2>
+<ul>
+<li><strong>badArgument</strong>: Invalid or missing parameters</li>
+<li><strong>badResumptionToken</strong>: Invalid resumption token</li>
+<li><strong>badVerb</strong>: Unsupported verb</li>
+<li><strong>cannotDisseminateFormat</strong>: Unsupported metadata format</li>
+<li><strong>idDoesNotExist</strong>: Record not found</li>
+<li><strong>noRecordsMatch</strong>: Handled by empty result sets</li>
+<li><strong>noMetadataFormats</strong>: N/A (we support metadata formats)</li>
+<li><strong>noSetHierarchy</strong>: N/A (we have sets)</li>
+</ul>
+</section>
+<section id="http-and-xml-compliance" class="level2">
+<h2 class="anchored" data-anchor-id="http-and-xml-compliance">5. HTTP and XML Compliance</h2>
+<ul>
+<li><strong>HTTP GET/POST</strong>: Supported via framework</li>
+<li><strong>Content-Type</strong>: <code>application/xml; charset=utf-8</code></li>
+<li><strong>XML Declaration</strong>: UTF-8 encoding specified</li>
+<li><strong>Namespaces</strong>: Proper OAI-PMH and metadata format namespaces</li>
+<li><strong>Schema Location</strong>: XSD references included</li>
+</ul>
+</section>
+<section id="date-and-time-iso-8601-compliance" class="level2">
+<h2 class="anchored" data-anchor-id="date-and-time-iso-8601-compliance">6. Date and Time ISO 8601 Compliance</h2>
+<ul>
+<li><strong>Format</strong>: YYYY-MM-DDThh:mm:ssZ (UTC)</li>
+<li><strong>Granularity</strong>: Supports both date and datetime formats</li>
+<li><strong>Parsing</strong>: Multiple format support for backward compatibility</li>
+<li><strong>Output</strong>: Consistent UTC format with Z suffix</li>
+</ul>
+</section>
+<section id="sets-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="sets-implementation">7. Sets Implementation</h2>
+<ul>
+<li><strong>Sets</strong>: Herbaria as natural sets</li>
+<li><strong>setSpec</strong>: Herbarium acronym (e.g., “PRC”, “BRNU”)</li>
+<li><strong>setName</strong>: Full herbarium name</li>
+<li><strong>Filtering</strong>: Records can be filtered by herbarium</li>
+</ul>
+</section>
+<section id="required-record-elements-compliance" class="level2">
+<h2 class="anchored" data-anchor-id="required-record-elements-compliance">8. Required Record Elements Compliance</h2>
+<ul>
+<li><strong>Header</strong>:
+<ul>
+<li>identifier: oai:domain:photo-{id} format</li>
+<li>datestamp: ISO 8601 UTC format</li>
+<li>setSpec: Herbarium acronym</li>
+</ul></li>
+<li><strong>Metadata</strong>: Format-specific content wrapped in metadata element</li>
+<li><strong>About</strong>: Not implemented (optional element)</li>
+</ul>
+</section>
+<section id="resumption-token-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="resumption-token-implementation">9. Resumption Token Implementation</h2>
+<ul>
+<li><strong>Token Format</strong>: Base64-encoded JSON</li>
+<li><strong>Parameters</strong>: Preserves metadataPrefix, from, until, set</li>
+<li><strong>Attributes</strong>: cursor, completeListSize when appropriate</li>
+<li><strong>Pagination</strong>: Configurable page size (default: 100)</li>
+<li><strong>Expiration</strong>: Implicit via parameter validation</li>
+</ul>
+</section>
+<section id="api-endpoints" class="level2">
+<h2 class="anchored" data-anchor-id="api-endpoints">API Endpoints</h2>
+<section id="base-url" class="level3">
+<h3 class="anchored" data-anchor-id="base-url">Base URL</h3>
+<pre><code>https://herbarium.biodiversity.cz/oai-pmh</code></pre>
+</section>
+<section id="supported-verbs" class="level3">
+<h3 class="anchored" data-anchor-id="supported-verbs">Supported Verbs</h3>
+<section id="identify" class="level4">
+<h4 class="anchored" data-anchor-id="identify">1. Identify</h4>
+<p>Returns repository information and policies.</p>
+<pre><code>GET /oai-pmh?verb=Identify</code></pre>
+</section>
+<section id="listmetadataformats" class="level4">
+<h4 class="anchored" data-anchor-id="listmetadataformats">2. ListMetadataFormats</h4>
+<p>Lists available metadata formats.</p>
+<pre><code>GET /oai-pmh?verb=ListMetadataFormats</code></pre>
+</section>
+<section id="listsets" class="level4">
+<h4 class="anchored" data-anchor-id="listsets">3. ListSets</h4>
+<p>Lists available sets (herbaria).</p>
+<pre><code>GET /oai-pmh?verb=ListSets</code></pre>
+</section>
+<section id="listidentifiers" class="level4">
+<h4 class="anchored" data-anchor-id="listidentifiers">4. ListIdentifiers</h4>
+<p>Lists record identifiers with optional filtering.</p>
+<pre><code>GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=oai_dc
+GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=oai_dc&amp;from=2023-01-01
+GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=oai_dc&amp;set=PRC</code></pre>
+</section>
+<section id="listrecords" class="level4">
+<h4 class="anchored" data-anchor-id="listrecords">5. ListRecords</h4>
+<p>Lists complete records with optional filtering.</p>
+<pre><code>GET /oai-pmh?verb=ListRecords&amp;metadataPrefix=oai_dc
+GET /oai-pmh?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2023-01-01&amp;until=2023-12-31</code></pre>
+</section>
+<section id="getrecord" class="level4">
+<h4 class="anchored" data-anchor-id="getrecord">6. GetRecord</h4>
+<p>Retrieves a single record by identifier.</p>
+<pre><code>GET /oai-pmh?verb=GetRecord&amp;identifier=oai:domain:photo-123&amp;metadataPrefix=oai_dc</code></pre>
+</section>
+</section>
+</section>
+<section id="error-handling" class="level2">
+<h2 class="anchored" data-anchor-id="error-handling">Error Handling</h2>
+<p>Complete OAI-PMH error code support:</p>
+<ul>
+<li><strong>badArgument</strong>: Invalid or missing parameters</li>
+<li><strong>badResumptionToken</strong>: Invalid resumption token</li>
+<li><strong>badVerb</strong>: Unsupported verb</li>
+<li><strong>cannotDisseminateFormat</strong>: Unsupported metadata format</li>
+<li><strong>idDoesNotExist</strong>: Record not found</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -600,18 +772,27 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/metadata/index.html" class="pagination-link" aria-label="Metadata">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Metadata</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© CC-By Biodiversity.cz, 2025</p>
+<p>CC-BY Biodiversity.cz, 2025</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/biodiversity-cz/herbarium-documentation/edit/main/docs/introduction/kapitola1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biodiversity-cz/herbarium-documentation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/biodiversity-cz/herbarium-documentation/edit/main/docs/metadata/OAI-PMH.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/biodiversity-cz/herbarium-documentation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
-</div>
+      &nbsp;
+    </div>
   </div>
 </footer>
 

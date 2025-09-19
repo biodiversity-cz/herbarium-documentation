@@ -1,5 +1,167 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Herbarium Documentation",
+    "section": "",
+    "text": "This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science UK, Prague.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "docs/introduction/index.html",
+    "href": "docs/introduction/index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "EOSC\nNRP\nbiodiversity.cz\nherbarium.biodiversity.cz",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html",
+    "href": "docs/metadata/OAI-PMH.html",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Identify: Returns repository information and policies\nListMetadataFormats: Returns available metadata formats\nListSets: Returns available sets (herbaria)\nListIdentifiers: Returns record headers with optional filtering\nListRecords: Returns complete records with optional filtering\nGetRecord: Returns a single record by identifier\n\n\n\n\n\nrepositoryName: “herbarium.biodiversity.cz”\nbaseURL: Dynamically generated from current request\nprotocolVersion: “2.0”\nadminEmail: Configurable (default: novotp@natur.cuni.cz)\nearliestDatestamp: Calculated from earliest public record\ndeletedRecord: “no” (we don’t track deletions)\ngranularity: “YYYY-MM-DDThh:mm:ssZ”\n\n\n\n\n\n\n\nPrefix: oai_dc\nNamespace: http://www.openarchives.org/OAI/2.0/oai_dc/\nSchema: http://www.openarchives.org/OAI/2.0/oai_dc.xsd\nAll 15 Dublin Core elements mapped:\n\ndc:title: Specimen identifier as title\ndc:creator: Herbarium name\ndc:subject: Classification terms (botanical collection, digital image)\ndc:description: Technical details and image information\ndc:publisher: Herbarium as publisher\ndc:date: Creation and modification dates\ndc:type: Resource type (Image, StillImage)\ndc:format: MIME types (TIFF, JP2)\ndc:identifier: Multiple identifiers (OAI, JACQ PID, specimen ID)\ndc:source: Archive filename\ndc:language: Latin (for botanical specimens)\ndc:relation: IIIF URLs\ndc:coverage: Geographic information\ndc:rights: License information\n\n\n\n\n\n\nPrefix: ccmm\nPlaceholder implementation ready for extension\n\nBasic structure in place\nInstitution information\nDigital object metadata\nTemporal information\nReady for taxonomic and collection event data\n\n\n\n\n\n\n\nbadArgument: Invalid or missing parameters\nbadResumptionToken: Invalid resumption token\nbadVerb: Unsupported verb\ncannotDisseminateFormat: Unsupported metadata format\nidDoesNotExist: Record not found\nnoRecordsMatch: Handled by empty result sets\nnoMetadataFormats: N/A (we support metadata formats)\nnoSetHierarchy: N/A (we have sets)\n\n\n\n\n\nHTTP GET/POST: Supported via framework\nContent-Type: application/xml; charset=utf-8\nXML Declaration: UTF-8 encoding specified\nNamespaces: Proper OAI-PMH and metadata format namespaces\nSchema Location: XSD references included\n\n\n\n\n\nFormat: YYYY-MM-DDThh:mm:ssZ (UTC)\nGranularity: Supports both date and datetime formats\nParsing: Multiple format support for backward compatibility\nOutput: Consistent UTC format with Z suffix\n\n\n\n\n\nSets: Herbaria as natural sets\nsetSpec: Herbarium acronym (e.g., “PRC”, “BRNU”)\nsetName: Full herbarium name\nFiltering: Records can be filtered by herbarium\n\n\n\n\n\nHeader:\n\nidentifier: oai:domain:photo-{id} format\ndatestamp: ISO 8601 UTC format\nsetSpec: Herbarium acronym\n\nMetadata: Format-specific content wrapped in metadata element\nAbout: Not implemented (optional element)\n\n\n\n\n\nToken Format: Base64-encoded JSON\nParameters: Preserves metadataPrefix, from, until, set\nAttributes: cursor, completeListSize when appropriate\nPagination: Configurable page size (default: 100)\nExpiration: Implicit via parameter validation\n\n\n\n\n\n\nhttps://herbarium.biodiversity.cz/oai-pmh\n\n\n\n\n\nReturns repository information and policies.\nGET /oai-pmh?verb=Identify\n\n\n\nLists available metadata formats.\nGET /oai-pmh?verb=ListMetadataFormats\n\n\n\nLists available sets (herbaria).\nGET /oai-pmh?verb=ListSets\n\n\n\nLists record identifiers with optional filtering.\nGET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc\nGET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&from=2023-01-01\nGET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&set=PRC\n\n\n\nLists complete records with optional filtering.\nGET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc\nGET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc&from=2023-01-01&until=2023-12-31\n\n\n\nRetrieves a single record by identifier.\nGET /oai-pmh?verb=GetRecord&identifier=oai:domain:photo-123&metadataPrefix=oai_dc\n\n\n\n\n\nComplete OAI-PMH error code support:\n\nbadArgument: Invalid or missing parameters\nbadResumptionToken: Invalid resumption token\nbadVerb: Unsupported verb\ncannotDisseminateFormat: Unsupported metadata format\nidDoesNotExist: Record not found",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#mandatory-verbs-implementation",
+    "href": "docs/metadata/OAI-PMH.html#mandatory-verbs-implementation",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Identify: Returns repository information and policies\nListMetadataFormats: Returns available metadata formats\nListSets: Returns available sets (herbaria)\nListIdentifiers: Returns record headers with optional filtering\nListRecords: Returns complete records with optional filtering\nGetRecord: Returns a single record by identifier",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#required-elements",
+    "href": "docs/metadata/OAI-PMH.html#required-elements",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "repositoryName: “herbarium.biodiversity.cz”\nbaseURL: Dynamically generated from current request\nprotocolVersion: “2.0”\nadminEmail: Configurable (default: novotp@natur.cuni.cz)\nearliestDatestamp: Calculated from earliest public record\ndeletedRecord: “no” (we don’t track deletions)\ngranularity: “YYYY-MM-DDThh:mm:ssZ”",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#metadata-format-support",
+    "href": "docs/metadata/OAI-PMH.html#metadata-format-support",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Prefix: oai_dc\nNamespace: http://www.openarchives.org/OAI/2.0/oai_dc/\nSchema: http://www.openarchives.org/OAI/2.0/oai_dc.xsd\nAll 15 Dublin Core elements mapped:\n\ndc:title: Specimen identifier as title\ndc:creator: Herbarium name\ndc:subject: Classification terms (botanical collection, digital image)\ndc:description: Technical details and image information\ndc:publisher: Herbarium as publisher\ndc:date: Creation and modification dates\ndc:type: Resource type (Image, StillImage)\ndc:format: MIME types (TIFF, JP2)\ndc:identifier: Multiple identifiers (OAI, JACQ PID, specimen ID)\ndc:source: Archive filename\ndc:language: Latin (for botanical specimens)\ndc:relation: IIIF URLs\ndc:coverage: Geographic information\ndc:rights: License information\n\n\n\n\n\n\nPrefix: ccmm\nPlaceholder implementation ready for extension\n\nBasic structure in place\nInstitution information\nDigital object metadata\nTemporal information\nReady for taxonomic and collection event data",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#error-handling-compliance",
+    "href": "docs/metadata/OAI-PMH.html#error-handling-compliance",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "badArgument: Invalid or missing parameters\nbadResumptionToken: Invalid resumption token\nbadVerb: Unsupported verb\ncannotDisseminateFormat: Unsupported metadata format\nidDoesNotExist: Record not found\nnoRecordsMatch: Handled by empty result sets\nnoMetadataFormats: N/A (we support metadata formats)\nnoSetHierarchy: N/A (we have sets)",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#http-and-xml-compliance",
+    "href": "docs/metadata/OAI-PMH.html#http-and-xml-compliance",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "HTTP GET/POST: Supported via framework\nContent-Type: application/xml; charset=utf-8\nXML Declaration: UTF-8 encoding specified\nNamespaces: Proper OAI-PMH and metadata format namespaces\nSchema Location: XSD references included",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#date-and-time-iso-8601-compliance",
+    "href": "docs/metadata/OAI-PMH.html#date-and-time-iso-8601-compliance",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Format: YYYY-MM-DDThh:mm:ssZ (UTC)\nGranularity: Supports both date and datetime formats\nParsing: Multiple format support for backward compatibility\nOutput: Consistent UTC format with Z suffix",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#sets-implementation",
+    "href": "docs/metadata/OAI-PMH.html#sets-implementation",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Sets: Herbaria as natural sets\nsetSpec: Herbarium acronym (e.g., “PRC”, “BRNU”)\nsetName: Full herbarium name\nFiltering: Records can be filtered by herbarium",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#required-record-elements-compliance",
+    "href": "docs/metadata/OAI-PMH.html#required-record-elements-compliance",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Header:\n\nidentifier: oai:domain:photo-{id} format\ndatestamp: ISO 8601 UTC format\nsetSpec: Herbarium acronym\n\nMetadata: Format-specific content wrapped in metadata element\nAbout: Not implemented (optional element)",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#resumption-token-implementation",
+    "href": "docs/metadata/OAI-PMH.html#resumption-token-implementation",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Token Format: Base64-encoded JSON\nParameters: Preserves metadataPrefix, from, until, set\nAttributes: cursor, completeListSize when appropriate\nPagination: Configurable page size (default: 100)\nExpiration: Implicit via parameter validation",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#api-endpoints",
+    "href": "docs/metadata/OAI-PMH.html#api-endpoints",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "https://herbarium.biodiversity.cz/oai-pmh\n\n\n\n\n\nReturns repository information and policies.\nGET /oai-pmh?verb=Identify\n\n\n\nLists available metadata formats.\nGET /oai-pmh?verb=ListMetadataFormats\n\n\n\nLists available sets (herbaria).\nGET /oai-pmh?verb=ListSets\n\n\n\nLists record identifiers with optional filtering.\nGET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc\nGET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&from=2023-01-01\nGET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&set=PRC\n\n\n\nLists complete records with optional filtering.\nGET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc\nGET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc&from=2023-01-01&until=2023-12-31\n\n\n\nRetrieves a single record by identifier.\nGET /oai-pmh?verb=GetRecord&identifier=oai:domain:photo-123&metadataPrefix=oai_dc",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/OAI-PMH.html#error-handling",
+    "href": "docs/metadata/OAI-PMH.html#error-handling",
+    "title": "OAI-PMH",
+    "section": "",
+    "text": "Complete OAI-PMH error code support:\n\nbadArgument: Invalid or missing parameters\nbadResumptionToken: Invalid resumption token\nbadVerb: Unsupported verb\ncannotDisseminateFormat: Unsupported metadata format\nidDoesNotExist: Record not found",
+    "crumbs": [
+      "Metadata",
+      "OAI-PMH"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/index.html",
+    "href": "docs/metadata/index.html",
+    "title": "Metadata",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "Metadata"
+    ]
+  },
+  {
     "objectID": "docs/introduction/10.html",
     "href": "docs/introduction/10.html",
     "title": "Software used in Czech herbaria",
@@ -19,36 +181,6 @@
     "crumbs": [
       "Introduction",
       "Czech Herbaria"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Herbarium Documentation",
-    "section": "",
-    "text": "This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science UK, Prague.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "docs/metadata/index.html",
-    "href": "docs/metadata/index.html",
-    "title": "Metadata model of the herabrium.biodiversity.cz repository items",
-    "section": "",
-    "text": "tbd",
-    "crumbs": [
-      "Metadata model of the herabrium.biodiversity.cz repository items"
-    ]
-  },
-  {
-    "objectID": "docs/introduction/index.html",
-    "href": "docs/introduction/index.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "EOSC\nNRP\nbiodiversity.cz\nherbarium.biodiversity.cz",
-    "crumbs": [
-      "Introduction"
     ]
   }
 ]
