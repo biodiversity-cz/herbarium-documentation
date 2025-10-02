@@ -42,6 +42,12 @@ website:
       - section: docs/metadata/index.qmd
         contents:
           - docs/metadata/OAI-PMH.qmd
+      - href: docs/deposition/index.qmd
+        text: Deposition
+      - href: docs/legal/index.qmd
+        text: Terms and conditions
+      - href: docs/issues/index.qmd
+        text: Issues and support
 #      - docs/metadata/index.qmd
 
 format:
