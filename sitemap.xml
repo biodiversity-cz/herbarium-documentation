@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://biodiversity-cz.github.io/herbarium-documentation/index.html</loc>
-    <lastmod>2025-09-19T07:54:29.282Z</lastmod>
-  </url>
-  <url>
-    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/introduction/index.html</loc>
-    <lastmod>2025-09-19T07:54:29.282Z</lastmod>
-  </url>
-  <url>
-    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/metadata/OAI-PMH.html</loc>
-    <lastmod>2025-09-19T07:54:29.282Z</lastmod>
-  </url>
-  <url>
-    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/metadata/index.html</loc>
-    <lastmod>2025-09-19T07:54:29.282Z</lastmod>
-  </url>
-  <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/introduction/10.html</loc>
-    <lastmod>2025-09-19T07:54:29.282Z</lastmod>
+    <lastmod>2025-10-02T12:36:04.203Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/introduction/01.html</loc>
-    <lastmod>2025-09-19T07:54:29.282Z</lastmod>
+    <lastmod>2025-10-02T12:36:04.203Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/metadata/index.html</loc>
+    <lastmod>2025-10-02T12:36:04.203Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biodiversity-cz.github.io/herbarium-documentation/index.html</loc>
+    <lastmod>2025-10-02T12:36:04.203Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/metadata/OAI-PMH.html</loc>
+    <lastmod>2025-10-02T12:36:04.203Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/introduction/index.html</loc>
+    <lastmod>2025-10-02T12:36:04.203Z</lastmod>
   </url>
 </urlset>
