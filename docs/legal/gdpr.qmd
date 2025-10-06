@@ -1,0 +1,5 @@
+---
+title: "GDPR"
+---
+
+The repository follows GDPR rules following the [e-infra standards](https://www.e-infra.cz/en/kontaktni-formular)
