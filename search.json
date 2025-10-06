@@ -10,53 +10,25 @@
     ]
   },
   {
-    "objectID": "docs/introduction/index.html",
-    "href": "docs/introduction/index.html",
-    "title": "Introduction",
+    "objectID": "docs/introduction/10.html",
+    "href": "docs/introduction/10.html",
+    "title": "Software used in Czech herbaria",
     "section": "",
-    "text": "EOSC\nNRP\nbiodiversity.cz\nherbarium.biodiversity.cz",
+    "text": "JACQ\nMuseion\nDEMUS\nHerbman\n?Bach\nZlínský kraj",
     "crumbs": [
-      "Introduction"
+      "Introduction",
+      "Software used in Czech herbaria"
     ]
   },
   {
-    "objectID": "docs/deposition/index.html",
-    "href": "docs/deposition/index.html",
-    "title": "Deposition mechanism",
+    "objectID": "docs/introduction/01.html",
+    "href": "docs/introduction/01.html",
+    "title": "Czech Herbaria",
     "section": "",
-    "text": "tbd",
+    "text": "value of herbarium\norganisation forms (museum, university, cas.cz, ..)",
     "crumbs": [
-      "Deposition"
-    ]
-  },
-  {
-    "objectID": "docs/metadata/index.html",
-    "href": "docs/metadata/index.html",
-    "title": "Metadata",
-    "section": "",
-    "text": "tbd",
-    "crumbs": [
-      "Metadata"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Herbarium Documentation",
-    "section": "",
-    "text": "This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science UK, Prague.\n\n\n\n\nThis project output was developed with financial contributions from the EOSC CZ initiative throught the project National Repository Platform for Research Data (CZ.02.01.01/00/23_014/0008787) funded by Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS).",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "docs/issues/index.html",
-    "href": "docs/issues/index.html",
-    "title": "Issues and problems",
-    "section": "",
-    "text": "tbd",
-    "crumbs": [
-      "Issues and support"
+      "Introduction",
+      "Czech Herbaria"
     ]
   },
   {
@@ -192,25 +164,60 @@
     ]
   },
   {
-    "objectID": "docs/introduction/01.html",
-    "href": "docs/introduction/01.html",
-    "title": "Czech Herbaria",
+    "objectID": "docs/issues/index.html",
+    "href": "docs/issues/index.html",
+    "title": "Issues and problems",
     "section": "",
-    "text": "value of herbarium\norganisation forms (museum, university, cas.cz, ..)",
+    "text": "tbd",
     "crumbs": [
-      "Introduction",
-      "Czech Herbaria"
+      "Issues and support"
     ]
   },
   {
-    "objectID": "docs/introduction/10.html",
-    "href": "docs/introduction/10.html",
-    "title": "Software used in Czech herbaria",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Herbarium Documentation",
     "section": "",
-    "text": "JACQ\nMuseion\nDEMUS\nHerbman\n?Bach\nZlínský kraj",
+    "text": "This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science UK, Prague.\n\n\n\n\nThis project output was developed with financial contributions from the EOSC CZ initiative throught the project National Repository Platform for Research Data (CZ.02.01.01/00/23_014/0008787) funded by Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS).",
     "crumbs": [
-      "Introduction",
-      "Software used in Czech herbaria"
+      "Welcome"
     ]
+  },
+  {
+    "objectID": "docs/metadata/index.html",
+    "href": "docs/metadata/index.html",
+    "title": "Metadata",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "Metadata"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html",
+    "href": "docs/deposition/index.html",
+    "title": "Deposition mechanism",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "Deposition"
+    ]
+  },
+  {
+    "objectID": "docs/introduction/index.html",
+    "href": "docs/introduction/index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "EOSC\nNRP\nbiodiversity.cz\nherbarium.biodiversity.cz",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "docs/legal/gdpr.html",
+    "href": "docs/legal/gdpr.html",
+    "title": "GDPR",
+    "section": "",
+    "text": "The repository follows GDPR rules following the e-infra standards"
   }
 ]
