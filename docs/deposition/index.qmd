@@ -2,4 +2,31 @@
 title: "Deposition mechanism"
 ---
 
-tbd
+First of all, let us remind this repository is only for institutions, not for private collectors. As an institution, contact the maintainer and request for joining. We will help you with [JACQ](https://jacq.org)/[GBIF](https://gbif.org) communication and prepare your account in the repository system. The process later is described bellow.
+
+----
+
+## Image Upload Procedure
+You will receive remote S3 storage access credentials from us, with a bucket ("folder") named *herbarium-XYZ* where XYZ means international acronym according tot he [Index Herbariorum](https://sweetgum.nybg.org/science/ih/). If you haven't heard about S3, think of it as a remote disk, or something similar to an FTP server. A list of supported clients and instructions can be found in the CESNET Object Storage S3 [documentation](https://docs.du.cesnet.cz/en/docs/object-storage-s3/s3-clients),  for Linux users  might be CrossFTP an option.
+
+Once all settled, upload your image files to the provided S3 bucket. The upload can run overnight or in the background if needed; you will find your optimal frequency and strategy to fit your digitization process.
+
+After the upload is complete, you will interact with the web interface of the repository and provide a few additional metadata fields that apply to all images in the batch (**all uploaded files** are taken as a single batch). Once this step is completed and you confirm import, the images will begin processing. During processing, files are removed from your S3 storage and transferred to our internal system, checked and stored.
+
+## Image Requirements
+
+Format: TIFF (.tif), preferably the original, unedited version. It should retain EXIF metadata (e.g., information about the camera or scanner). Correct DPI values are desirable but not mandatory.
+
+Barcode: Each image must contain a machine-readable barcode that matches an agreed pattern. The exact pattern for your institution will be arranged individually.
+
+If no barcode is found in the image, a *filenameFallback* option can be enabled. In this case, the system will derive the specimen identifier from the filename, according to a pre-agreed pattern tailored for your use as above.
+
+Multiple Barcodes (Multiplier):
+If multiple barcodes are detected in a single image, the system throw an error. In case you will use *multiplier* for a batch, it will i) require to be more than one valid barcode present (to make the process more predictable) and ii) duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input.
+
+## Validity checks
+Beside the logic of *specimen ID* identification and fit to herbarium the user works in, the system checks for:
+
+- filesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB.
+- uniqueness in scope of individual specimens (you cannot upload identical image to a single specimen twice, but an identical photo can be uploaded to different specimens ID)
+- existence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g. JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not a publishing it.

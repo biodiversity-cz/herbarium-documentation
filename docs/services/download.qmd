@@ -1,0 +1,26 @@
+---
+title: "Download and services"
+---
+
+## Service Thumb
+This service provides a thumbnail of the master file in format suitable for machine recognition and processing.
+
+- mimeType: **image/png**
+- size: the longer side is equal to **1280px**
+- endpoint: **https://herbarium.biodiversity.cz/repository/databot-thumb-image/{photoId}**
+
+## Service JP2
+Provides a full size image with lossy compression.
+
+- mimeType: **image/jp2**
+- size: **equal to original**
+- compression: **quality factor 46**
+- endpoint: **https://herbarium.biodiversity.cz/repository/jp2-image/{photoId}**
+
+## Service Master File
+Provides the original image with lossless compression.
+
+- mimeType: **image/tif**
+- size: **equal to original**
+- compression: **lossless**
+- endpoint: **https://herbarium.biodiversity.cz/repository/archive-image/{photoId}**

@@ -1,5 +1,5 @@
 ---
-title: "Issues and problems"
+title: "Issues and support"
 ---
 
-tbd
+HERBIO is a pilot repository under active development. Please be active in commenting the concept, providing feedback and development proposals. You can do it via [GitHub](https://github.com/biodiversity-cz) issues for individual codebases, or via email to [Patrik Mráz](mailto:mrazp@natur.cuni.cz) and [Petr Novotný](mailto:novotp@natur.cuni.cz).

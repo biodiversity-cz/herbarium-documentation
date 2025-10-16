@@ -1,8 +1,6 @@
 ---
-title: "OAI-PMH"
+title: "OAI-PMH v2.0 Compliance"
 ---
-
-# OAI-PMH v2.0 Compliance Verification
 
 ## 1. Mandatory Verbs Implementation
 
@@ -13,19 +11,9 @@ title: "OAI-PMH"
 - **ListRecords**: Returns complete records with optional filtering
 - **GetRecord**: Returns a single record by identifier
 
-## 2. Required Elements
+## 2. Metadata Format Support
 
-- **repositoryName**: "herbarium.biodiversity.cz"
-- **baseURL**: Dynamically generated from current request
-- **protocolVersion**: "2.0"
-- **adminEmail**: Configurable (default: novotp@natur.cuni.cz)
-- **earliestDatestamp**: Calculated from earliest public record
-- **deletedRecord**: "no" (we don't track deletions)
-- **granularity**: "YYYY-MM-DDThh:mm:ssZ"
-
-## 3. Metadata Format Support
-
-### Dublin Core (oai_dc) - Mandatory Format
+### Dublin Core (oai_dc) - Obligatory Format
 - **Prefix**: `oai_dc`
 - **Namespace**: `http://www.openarchives.org/OAI/2.0/oai_dc/`
 - **Schema**: `http://www.openarchives.org/OAI/2.0/oai_dc.xsd`
@@ -45,59 +33,19 @@ title: "OAI-PMH"
     - **dc:coverage**: Geographic information
     - **dc:rights**: License information
 
-### CCMM Format - Additional Format TBD
+### CCMM Format - Mandatory Format
 - **Prefix**: `ccmm`
-- **Placeholder implementation ready for extension**
-    - Basic structure in place
-    - Institution information
-    - Digital object metadata
-    - Temporal information
-    - Ready for taxonomic and collection event data
+- **Namespace**: `https://github.com/techlib/CCMM`
+- **Schema**: `https://techlib.github.io/CCMM/dataset/schema.xsd`
 
-## 4. Error Handling Compliance
-
-- **badArgument**: Invalid or missing parameters
-- **badResumptionToken**: Invalid resumption token
-- **badVerb**: Unsupported verb
-- **cannotDisseminateFormat**: Unsupported metadata format
-- **idDoesNotExist**: Record not found
-- **noRecordsMatch**: Handled by empty result sets
-- **noMetadataFormats**: N/A (we support metadata formats)
-- **noSetHierarchy**: N/A (we have sets)
-
-
-## 5. HTTP and XML Compliance
-
-- **HTTP GET/POST**: Supported via framework
-- **Content-Type**: `application/xml; charset=utf-8`
-- **XML Declaration**: UTF-8 encoding specified
-- **Namespaces**: Proper OAI-PMH and metadata format namespaces
-- **Schema Location**: XSD references included
-
-## 6. Date and Time ISO 8601 Compliance
-
-- **Format**: YYYY-MM-DDThh:mm:ssZ (UTC)
-- **Granularity**: Supports both date and datetime formats
-- **Parsing**: Multiple format support for backward compatibility
-- **Output**: Consistent UTC format with Z suffix
-
-## 7. Sets Implementation
+## 3. Sets Implementation
 
 - **Sets**: Herbaria as natural sets
 - **setSpec**: Herbarium acronym (e.g., "PRC", "BRNU")
 - **setName**: Full herbarium name
 - **Filtering**: Records can be filtered by herbarium
 
-## 8. Required Record Elements Compliance
-
-- **Header**:
-  - identifier: oai:domain:photo-{id} format
-  - datestamp: ISO 8601 UTC format
-  - setSpec: Herbarium acronym
-- **Metadata**: Format-specific content wrapped in metadata element
-- **About**: Not implemented (optional element)
-
-## 9. Resumption Token Implementation
+## 4. Resumption Token Implementation
 
 - **Token Format**: Base64-encoded JSON
 - **Parameters**: Preserves metadataPrefix, from, until, set
@@ -159,14 +107,4 @@ Retrieves a single record by identifier.
 ```
 GET /oai-pmh?verb=GetRecord&identifier=oai:domain:photo-123&metadataPrefix=oai_dc
 ```
-
-## Error Handling
-
-Complete OAI-PMH error code support:
-
-- **badArgument**: Invalid or missing parameters
-- **badResumptionToken**: Invalid resumption token
-- **badVerb**: Unsupported verb
-- **cannotDisseminateFormat**: Unsupported metadata format
-- **idDoesNotExist**: Record not found
 

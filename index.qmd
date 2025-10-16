@@ -1,8 +1,8 @@
 ---
-title: "Herbarium Documentation"
+title: "herbarium.biodiversity.cz (HERBIO)"
 ---
 
-This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science UK, Prague.
+This page is in preparation, in case of any questions about the [herbarium.biodiversity.cz](https://herbarium.biodiversity.cz) repository, please contact PRC herbarium, Faculty of Science - Charles University, Prague.
 
 
 [//]: # (obligatory branding for EOSC.CZ)
