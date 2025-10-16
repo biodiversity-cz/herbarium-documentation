@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/legal/index.html" rel="next">
+<link href="../../docs/services/download.html" rel="next">
 <link href="../../docs/metadata/OAI-PMH.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/metadata/OAI-PMH.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">OAI-PMH</span></a>
+ <span class="menu-text">OAI-PMH v2.0 Compliance</span></a>
   </div>
 </li>
       </ul>
@@ -160,6 +160,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../docs/deposition/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Deposition</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/services/download.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download and services</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -202,9 +208,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>tbd</p>
+<p>First of all, let us remind this repository is only for institutions, not for private collectors. As an institution, contact the maintainer and request for joining. We will help you with <a href="https://jacq.org">JACQ</a>/<a href="https://gbif.org">GBIF</a> communication and prepare your account in the repository system. The process later is described bellow.</p>
+<hr>
+<section id="image-upload-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="image-upload-procedure">Image Upload Procedure</h2>
+<p>You will receive remote S3 storage access credentials from us, with a bucket (“folder”) named <em>herbarium-XYZ</em> where XYZ means international acronym according tot he <a href="https://sweetgum.nybg.org/science/ih/">Index Herbariorum</a>. If you haven’t heard about S3, think of it as a remote disk, or something similar to an FTP server. A list of supported clients and instructions can be found in the CESNET Object Storage S3 <a href="https://docs.du.cesnet.cz/en/docs/object-storage-s3/s3-clients">documentation</a>, for Linux users might be CrossFTP an option.</p>
+<p>Once all settled, upload your image files to the provided S3 bucket. The upload can run overnight or in the background if needed; you will find your optimal frequency and strategy to fit your digitization process.</p>
+<p>After the upload is complete, you will interact with the web interface of the repository and provide a few additional metadata fields that apply to all images in the batch (<strong>all uploaded files</strong> are taken as a single batch). Once this step is completed and you confirm import, the images will begin processing. During processing, files are removed from your S3 storage and transferred to our internal system, checked and stored.</p>
+</section>
+<section id="image-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="image-requirements">Image Requirements</h2>
+<p>Format: TIFF (.tif), preferably the original, unedited version. It should retain EXIF metadata (e.g., information about the camera or scanner). Correct DPI values are desirable but not mandatory.</p>
+<p>Barcode: Each image must contain a machine-readable barcode that matches an agreed pattern. The exact pattern for your institution will be arranged individually.</p>
+<p>If no barcode is found in the image, a <em>filenameFallback</em> option can be enabled. In this case, the system will derive the specimen identifier from the filename, according to a pre-agreed pattern tailored for your use as above.</p>
+<p>Multiple Barcodes (Multiplier): If multiple barcodes are detected in a single image, the system throw an error. In case you will use <em>multiplier</em> for a batch, it will i) require to be more than one valid barcode present (to make the process more predictable) and ii) duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input.</p>
+</section>
+<section id="validity-checks" class="level2">
+<h2 class="anchored" data-anchor-id="validity-checks">Validity checks</h2>
+<p>Beside the logic of <em>specimen ID</em> identification and fit to herbarium the user works in, the system checks for:</p>
+<ul>
+<li>filesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB.</li>
+<li>uniqueness in scope of individual specimens (you cannot upload identical image to a single specimen twice, but an identical photo can be uploaded to different specimens ID)</li>
+<li>existence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g.&nbsp;JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not a publishing it.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -608,13 +637,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../docs/metadata/OAI-PMH.html" class="pagination-link" aria-label="OAI-PMH">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">OAI-PMH</span>
+      <a href="../../docs/metadata/OAI-PMH.html" class="pagination-link" aria-label="OAI-PMH v2.0 Compliance">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">OAI-PMH v2.0 Compliance</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/legal/index.html" class="pagination-link" aria-label="Terms and conditions">
-        <span class="nav-page-text">Terms and conditions</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../docs/services/download.html" class="pagination-link" aria-label="Download and services">
+        <span class="nav-page-text">Download and services</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

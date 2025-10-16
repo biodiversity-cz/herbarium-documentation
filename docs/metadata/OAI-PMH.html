@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OAI-PMH – Herbarium Documentation</title>
+<title>OAI-PMH v2.0 Compliance – Herbarium Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/metadata/index.html">Metadata</a></li><li class="breadcrumb-item"><a href="../../docs/metadata/OAI-PMH.html">OAI-PMH</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/metadata/index.html">Metadata</a></li><li class="breadcrumb-item"><a href="../../docs/metadata/OAI-PMH.html">OAI-PMH v2.0 Compliance</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/metadata/OAI-PMH.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">OAI-PMH</span></a>
+ <span class="menu-text">OAI-PMH v2.0 Compliance</span></a>
   </div>
 </li>
       </ul>
@@ -160,6 +160,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../docs/deposition/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Deposition</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/services/download.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download and services</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -183,9 +189,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/metadata/index.html">Metadata</a></li><li class="breadcrumb-item"><a href="../../docs/metadata/OAI-PMH.html">OAI-PMH</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/metadata/index.html">Metadata</a></li><li class="breadcrumb-item"><a href="../../docs/metadata/OAI-PMH.html">OAI-PMH v2.0 Compliance</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">OAI-PMH</h1>
+<h1 class="title">OAI-PMH v2.0 Compliance</h1>
 </div>
 
 
@@ -202,8 +208,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="oai-pmh-v2.0-compliance-verification" class="level1">
-<h1>OAI-PMH v2.0 Compliance Verification</h1>
 <section id="mandatory-verbs-implementation" class="level2">
 <h2 class="anchored" data-anchor-id="mandatory-verbs-implementation">1. Mandatory Verbs Implementation</h2>
 <ul>
@@ -215,22 +219,10 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>GetRecord</strong>: Returns a single record by identifier</li>
 </ul>
 </section>
-<section id="required-elements" class="level2">
-<h2 class="anchored" data-anchor-id="required-elements">2. Required Elements</h2>
-<ul>
-<li><strong>repositoryName</strong>: “herbarium.biodiversity.cz”</li>
-<li><strong>baseURL</strong>: Dynamically generated from current request</li>
-<li><strong>protocolVersion</strong>: “2.0”</li>
-<li><strong>adminEmail</strong>: Configurable (default: novotp@natur.cuni.cz)</li>
-<li><strong>earliestDatestamp</strong>: Calculated from earliest public record</li>
-<li><strong>deletedRecord</strong>: “no” (we don’t track deletions)</li>
-<li><strong>granularity</strong>: “YYYY-MM-DDThh:mm:ssZ”</li>
-</ul>
-</section>
 <section id="metadata-format-support" class="level2">
-<h2 class="anchored" data-anchor-id="metadata-format-support">3. Metadata Format Support</h2>
-<section id="dublin-core-oai_dc---mandatory-format" class="level3">
-<h3 class="anchored" data-anchor-id="dublin-core-oai_dc---mandatory-format">Dublin Core (oai_dc) - Mandatory Format</h3>
+<h2 class="anchored" data-anchor-id="metadata-format-support">2. Metadata Format Support</h2>
+<section id="dublin-core-oai_dc---obligatory-format" class="level3">
+<h3 class="anchored" data-anchor-id="dublin-core-oai_dc---obligatory-format">Dublin Core (oai_dc) - Obligatory Format</h3>
 <ul>
 <li><strong>Prefix</strong>: <code>oai_dc</code></li>
 <li><strong>Namespace</strong>: <code>http://www.openarchives.org/OAI/2.0/oai_dc/</code></li>
@@ -254,55 +246,17 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="ccmm-format---additional-format-tbd" class="level3">
-<h3 class="anchored" data-anchor-id="ccmm-format---additional-format-tbd">CCMM Format - Additional Format TBD</h3>
+<section id="ccmm-format---mandatory-format" class="level3">
+<h3 class="anchored" data-anchor-id="ccmm-format---mandatory-format">CCMM Format - Mandatory Format</h3>
 <ul>
 <li><strong>Prefix</strong>: <code>ccmm</code></li>
-<li><strong>Placeholder implementation ready for extension</strong>
-<ul>
-<li>Basic structure in place</li>
-<li>Institution information</li>
-<li>Digital object metadata</li>
-<li>Temporal information</li>
-<li>Ready for taxonomic and collection event data</li>
-</ul></li>
+<li><strong>Namespace</strong>: <code>https://github.com/techlib/CCMM</code></li>
+<li><strong>Schema</strong>: <code>https://techlib.github.io/CCMM/dataset/schema.xsd</code></li>
 </ul>
 </section>
-</section>
-<section id="error-handling-compliance" class="level2">
-<h2 class="anchored" data-anchor-id="error-handling-compliance">4. Error Handling Compliance</h2>
-<ul>
-<li><strong>badArgument</strong>: Invalid or missing parameters</li>
-<li><strong>badResumptionToken</strong>: Invalid resumption token</li>
-<li><strong>badVerb</strong>: Unsupported verb</li>
-<li><strong>cannotDisseminateFormat</strong>: Unsupported metadata format</li>
-<li><strong>idDoesNotExist</strong>: Record not found</li>
-<li><strong>noRecordsMatch</strong>: Handled by empty result sets</li>
-<li><strong>noMetadataFormats</strong>: N/A (we support metadata formats)</li>
-<li><strong>noSetHierarchy</strong>: N/A (we have sets)</li>
-</ul>
-</section>
-<section id="http-and-xml-compliance" class="level2">
-<h2 class="anchored" data-anchor-id="http-and-xml-compliance">5. HTTP and XML Compliance</h2>
-<ul>
-<li><strong>HTTP GET/POST</strong>: Supported via framework</li>
-<li><strong>Content-Type</strong>: <code>application/xml; charset=utf-8</code></li>
-<li><strong>XML Declaration</strong>: UTF-8 encoding specified</li>
-<li><strong>Namespaces</strong>: Proper OAI-PMH and metadata format namespaces</li>
-<li><strong>Schema Location</strong>: XSD references included</li>
-</ul>
-</section>
-<section id="date-and-time-iso-8601-compliance" class="level2">
-<h2 class="anchored" data-anchor-id="date-and-time-iso-8601-compliance">6. Date and Time ISO 8601 Compliance</h2>
-<ul>
-<li><strong>Format</strong>: YYYY-MM-DDThh:mm:ssZ (UTC)</li>
-<li><strong>Granularity</strong>: Supports both date and datetime formats</li>
-<li><strong>Parsing</strong>: Multiple format support for backward compatibility</li>
-<li><strong>Output</strong>: Consistent UTC format with Z suffix</li>
-</ul>
 </section>
 <section id="sets-implementation" class="level2">
-<h2 class="anchored" data-anchor-id="sets-implementation">7. Sets Implementation</h2>
+<h2 class="anchored" data-anchor-id="sets-implementation">3. Sets Implementation</h2>
 <ul>
 <li><strong>Sets</strong>: Herbaria as natural sets</li>
 <li><strong>setSpec</strong>: Herbarium acronym (e.g., “PRC”, “BRNU”)</li>
@@ -310,21 +264,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Filtering</strong>: Records can be filtered by herbarium</li>
 </ul>
 </section>
-<section id="required-record-elements-compliance" class="level2">
-<h2 class="anchored" data-anchor-id="required-record-elements-compliance">8. Required Record Elements Compliance</h2>
-<ul>
-<li><strong>Header</strong>:
-<ul>
-<li>identifier: oai:domain:photo-{id} format</li>
-<li>datestamp: ISO 8601 UTC format</li>
-<li>setSpec: Herbarium acronym</li>
-</ul></li>
-<li><strong>Metadata</strong>: Format-specific content wrapped in metadata element</li>
-<li><strong>About</strong>: Not implemented (optional element)</li>
-</ul>
-</section>
 <section id="resumption-token-implementation" class="level2">
-<h2 class="anchored" data-anchor-id="resumption-token-implementation">9. Resumption Token Implementation</h2>
+<h2 class="anchored" data-anchor-id="resumption-token-implementation">4. Resumption Token Implementation</h2>
 <ul>
 <li><strong>Token Format</strong>: Base64-encoded JSON</li>
 <li><strong>Parameters</strong>: Preserves metadataPrefix, from, until, set</li>
@@ -373,21 +314,9 @@ GET /oai-pmh?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2023-01-01&amp;
 <h4 class="anchored" data-anchor-id="getrecord">6. GetRecord</h4>
 <p>Retrieves a single record by identifier.</p>
 <pre><code>GET /oai-pmh?verb=GetRecord&amp;identifier=oai:domain:photo-123&amp;metadataPrefix=oai_dc</code></pre>
-</section>
-</section>
-</section>
-<section id="error-handling" class="level2">
-<h2 class="anchored" data-anchor-id="error-handling">Error Handling</h2>
-<p>Complete OAI-PMH error code support:</p>
-<ul>
-<li><strong>badArgument</strong>: Invalid or missing parameters</li>
-<li><strong>badResumptionToken</strong>: Invalid resumption token</li>
-<li><strong>badVerb</strong>: Unsupported verb</li>
-<li><strong>cannotDisseminateFormat</strong>: Unsupported metadata format</li>
-<li><strong>idDoesNotExist</strong>: Record not found</li>
-</ul>
 
 
+</section>
 </section>
 </section>
 

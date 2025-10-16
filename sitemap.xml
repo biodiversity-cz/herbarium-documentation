@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/legal/index.html</loc>
-    <lastmod>2025-10-06T06:22:50.680Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/introduction/10.html</loc>
-    <lastmod>2025-10-06T06:22:50.679Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.508Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/introduction/01.html</loc>
-    <lastmod>2025-10-06T06:22:50.679Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.508Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/metadata/OAI-PMH.html</loc>
-    <lastmod>2025-10-06T06:22:50.680Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
   </url>
   <url>
-    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/issues/index.html</loc>
-    <lastmod>2025-10-06T06:22:50.680Z</lastmod>
+    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/services/download.html</loc>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/index.html</loc>
-    <lastmod>2025-10-06T06:22:50.680Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/issues/index.html</loc>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/metadata/index.html</loc>
-    <lastmod>2025-10-06T06:22:50.680Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/deposition/index.html</loc>
-    <lastmod>2025-10-06T06:22:50.679Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.508Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/introduction/index.html</loc>
-    <lastmod>2025-10-06T06:22:50.679Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
   </url>
   <url>
     <loc>https://biodiversity-cz.github.io/herbarium-documentation/docs/legal/gdpr.html</loc>
-    <lastmod>2025-10-06T06:22:50.680Z</lastmod>
+    <lastmod>2025-10-16T07:45:31.509Z</lastmod>
   </url>
 </urlset>
