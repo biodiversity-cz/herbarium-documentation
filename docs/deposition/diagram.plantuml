@@ -1,0 +1,62 @@
+@startuml
+hide empty description
+scale 800 width
+state c <<choice>>
+state fork_state <<fork>>
+
+state "zero status" as zero
+  zero : Files uploaded to the S3 bucket and not marked to be imported yet. \nThese files are just resting in the folder, and the repository \n does not keep any evidence about them
+
+state "waiting before control" as waiting
+  waiting : A TIF file resting in individual herbarium bucket \n but already noticed by the repository
+
+state "image control OK" as imageOK
+  imageOK :The image passed well
+
+state "image control ERROR" as imageE
+  imageE : Some check failed, it is not possible to include this photo in the repository
+
+state "specimen control OK" as specimenOK
+  specimenOK : CETAF ID endpoint exists for the specimen
+
+state "waiting for publishing" as waitingPub
+  waitingPub : The repository is processing steps on publishing
+
+[*] -->  zero
+note on link
+  A file is manualy uploaded via S3 client by the curator
+end note
+zero --> waiting
+note on link
+  Curator filled metadata and submit files in the bucket to be imported
+end note
+waiting --> fork_state
+note on link
+  Repository is processing images asynchronously
+end note
+fork_state --> imageE
+fork_state --> imageOK
+imageE --> fork_state
+note on link
+  Curator can provide the specimen ID in case it wasn't autodetected
+end note
+
+imageOK --> specimenOK
+note on link
+  Proceeded automatically by the repository
+end note
+specimenOK --> c
+note left of c
+  Curators' decision
+end note
+c --> waitingPub
+c --> embargo
+embargo --> c
+note on link
+  Embargo autoexpires in two years
+end note
+waitingPub --> published
+note on link
+  Proceeded automatically by the repository
+end note
+@enduml
