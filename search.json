@@ -32,6 +32,116 @@
     ]
   },
   {
+    "objectID": "docs/deposition/index.html",
+    "href": "docs/deposition/index.html",
+    "title": "Deposition mechanism",
+    "section": "",
+    "text": "First of all, let us remind this repository is only for institutions, not for private collectors. As an institution, contact the maintainer and request for joining. We will help you with JACQ/GBIF communication and prepare your account in the repository system. The process later is described bellow.",
+    "crumbs": [
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html#image-upload-procedure",
+    "href": "docs/deposition/index.html#image-upload-procedure",
+    "title": "Deposition mechanism",
+    "section": "Image Upload Procedure",
+    "text": "Image Upload Procedure\nYou will receive remote S3 storage access credentials from us, with a bucket (“folder”) named herbarium-XYZ where XYZ means international acronym according tot he Index Herbariorum. If you haven’t heard about S3, think of it as a remote disk, or something similar to an FTP server. A list of supported clients and instructions can be found in the CESNET Object Storage S3 documentation, for Linux users might be CrossFTP an option.\nOnce all settled, upload your image files to the provided S3 bucket. The upload can run overnight or in the background if needed; you will find your optimal frequency and strategy to fit your digitization process.\nAfter the upload is complete, you will interact with the web interface of the repository and provide a few additional metadata fields that apply to all images in the batch (all uploaded files are taken as a single batch). Once this step is completed and you confirm import, the images will begin processing. During processing, files are removed from your S3 storage and transferred to our internal system, checked and stored.",
+    "crumbs": [
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html#image-requirements",
+    "href": "docs/deposition/index.html#image-requirements",
+    "title": "Deposition mechanism",
+    "section": "Image Requirements",
+    "text": "Image Requirements\nFormat: TIFF (.tif), preferably the original, unedited version. It should retain EXIF metadata (e.g., information about the camera or scanner). Correct DPI values are desirable but not mandatory.\nBarcode: Each image must contain a machine-readable barcode that matches an agreed pattern. The exact pattern for your institution will be arranged individually.\nIf no barcode is found in the image, a filenameFallback option can be enabled. In this case, the system will derive the specimen identifier from the filename, according to a pre-agreed pattern tailored for your use as above.\nMultiple Barcodes (Multiplier): If multiple barcodes are detected in a single image, the system throw an error. In case you will use multiplier for a batch, it will i) require to be more than one valid barcode present (to make the process more predictable) and ii) duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input.",
+    "crumbs": [
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html#validity-checks",
+    "href": "docs/deposition/index.html#validity-checks",
+    "title": "Deposition mechanism",
+    "section": "Validity checks",
+    "text": "Validity checks\nBeside the logic of specimen ID identification and fit to herbarium the user works in, the system checks for:\n\nfilesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB.\nuniqueness in scope of individual specimens (you cannot upload identical image to a single specimen twice, but an identical photo can be uploaded to different specimens ID)\nexistence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g. JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not a publishing it.",
+    "crumbs": [
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/metadata/index.html",
+    "href": "docs/metadata/index.html",
+    "title": "Metadata",
+    "section": "",
+    "text": "This repository is based on linked-data approach. Data about specimen (taxon, locality, collector etc.) are not stored in, but comes from external authority JACQ. These linked data are harvested regularly to allow us serve a complete information about the photos stored, nevertheless this distributed architecture can lead to a time delay of dataflow. To be sure about up-to-date information about the specimen itself, please follow the related resource metadata of individual photos.\nAll relevant metadata are provided via OAI-PMH protocol to the National Metadata Directory (NMA).",
+    "crumbs": [
+      "Metadata"
+    ]
+  },
+  {
+    "objectID": "docs/issues/index.html",
+    "href": "docs/issues/index.html",
+    "title": "Issues and support",
+    "section": "",
+    "text": "HERBIO is a pilot repository under active development. Please be active in commenting the concept, providing feedback and development proposals. You can do it via GitHub issues for individual codebases, or via email to Patrik Mráz and Petr Novotný.",
+    "crumbs": [
+      "Issues and support"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "herbarium.biodiversity.cz (HERBIO)",
+    "section": "",
+    "text": "This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science - Charles University, Prague.\n\n\n\n\nThis project output was developed with financial contributions from the EOSC CZ initiative throught the project National Repository Platform for Research Data (CZ.02.01.01/00/23_014/0008787) funded by Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS).",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "docs/services/download.html",
+    "href": "docs/services/download.html",
+    "title": "Download and services",
+    "section": "",
+    "text": "This service provides a thumbnail of the master file in format suitable for machine recognition and processing.\n\nmimeType: image/png\nsize: the longer side is equal to 1280px\nendpoint: https://herbarium.biodiversity.cz/repository/databot-thumb-image/{photoId}",
+    "crumbs": [
+      "Download and services"
+    ]
+  },
+  {
+    "objectID": "docs/services/download.html#service-thumb",
+    "href": "docs/services/download.html#service-thumb",
+    "title": "Download and services",
+    "section": "",
+    "text": "This service provides a thumbnail of the master file in format suitable for machine recognition and processing.\n\nmimeType: image/png\nsize: the longer side is equal to 1280px\nendpoint: https://herbarium.biodiversity.cz/repository/databot-thumb-image/{photoId}",
+    "crumbs": [
+      "Download and services"
+    ]
+  },
+  {
+    "objectID": "docs/services/download.html#service-jp2",
+    "href": "docs/services/download.html#service-jp2",
+    "title": "Download and services",
+    "section": "Service JP2",
+    "text": "Service JP2\nProvides a full size image with lossy compression.\n\nmimeType: image/jp2\nsize: equal to original\ncompression: quality factor 46\nendpoint: https://herbarium.biodiversity.cz/repository/jp2-image/{photoId}",
+    "crumbs": [
+      "Download and services"
+    ]
+  },
+  {
+    "objectID": "docs/services/download.html#service-master-file",
+    "href": "docs/services/download.html#service-master-file",
+    "title": "Download and services",
+    "section": "Service Master File",
+    "text": "Service Master File\nProvides the original image with lossless compression.\n\nmimeType: image/tif\nsize: equal to original\ncompression: lossless\nendpoint: https://herbarium.biodiversity.cz/repository/archive-image/{photoId}",
+    "crumbs": [
+      "Download and services"
+    ]
+  },
+  {
     "objectID": "docs/metadata/OAI-PMH.html",
     "href": "docs/metadata/OAI-PMH.html",
     "title": "OAI-PMH v2.0 Compliance",
@@ -95,116 +205,6 @@
     "crumbs": [
       "Metadata",
       "OAI-PMH v2.0 Compliance"
-    ]
-  },
-  {
-    "objectID": "docs/services/download.html",
-    "href": "docs/services/download.html",
-    "title": "Download and services",
-    "section": "",
-    "text": "This service provides a thumbnail of the master file in format suitable for machine recognition and processing.\n\nmimeType: image/png\nsize: the longer side is equal to 1280px\nendpoint: https://herbarium.biodiversity.cz/repository/databot-thumb-image/{photoId}",
-    "crumbs": [
-      "Download and services"
-    ]
-  },
-  {
-    "objectID": "docs/services/download.html#service-thumb",
-    "href": "docs/services/download.html#service-thumb",
-    "title": "Download and services",
-    "section": "",
-    "text": "This service provides a thumbnail of the master file in format suitable for machine recognition and processing.\n\nmimeType: image/png\nsize: the longer side is equal to 1280px\nendpoint: https://herbarium.biodiversity.cz/repository/databot-thumb-image/{photoId}",
-    "crumbs": [
-      "Download and services"
-    ]
-  },
-  {
-    "objectID": "docs/services/download.html#service-jp2",
-    "href": "docs/services/download.html#service-jp2",
-    "title": "Download and services",
-    "section": "Service JP2",
-    "text": "Service JP2\nProvides a full size image with lossy compression.\n\nmimeType: image/jp2\nsize: equal to original\ncompression: quality factor 46\nendpoint: https://herbarium.biodiversity.cz/repository/jp2-image/{photoId}",
-    "crumbs": [
-      "Download and services"
-    ]
-  },
-  {
-    "objectID": "docs/services/download.html#service-master-file",
-    "href": "docs/services/download.html#service-master-file",
-    "title": "Download and services",
-    "section": "Service Master File",
-    "text": "Service Master File\nProvides the original image with lossless compression.\n\nmimeType: image/tif\nsize: equal to original\ncompression: lossless\nendpoint: https://herbarium.biodiversity.cz/repository/archive-image/{photoId}",
-    "crumbs": [
-      "Download and services"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "herbarium.biodiversity.cz (HERBIO)",
-    "section": "",
-    "text": "This page is in preparation, in case of any questions about the herbarium.biodiversity.cz repository, please contact PRC herbarium, Faculty of Science - Charles University, Prague.\n\n\n\n\nThis project output was developed with financial contributions from the EOSC CZ initiative throught the project National Repository Platform for Research Data (CZ.02.01.01/00/23_014/0008787) funded by Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS).",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "docs/issues/index.html",
-    "href": "docs/issues/index.html",
-    "title": "Issues and support",
-    "section": "",
-    "text": "HERBIO is a pilot repository under active development. Please be active in commenting the concept, providing feedback and development proposals. You can do it via GitHub issues for individual codebases, or via email to Patrik Mráz and Petr Novotný.",
-    "crumbs": [
-      "Issues and support"
-    ]
-  },
-  {
-    "objectID": "docs/metadata/index.html",
-    "href": "docs/metadata/index.html",
-    "title": "Metadata",
-    "section": "",
-    "text": "This repository is based on linked-data approach. Data about specimen (taxon, locality, collector etc.) are not stored in, but comes from external authority JACQ. These linked data are harvested regularly to allow us serve a complete information about the photos stored, nevertheless this distributed architecture can lead to a time delay of dataflow. To be sure about up-to-date information about the specimen itself, please follow the related resource metadata of individual photos.\nAll relevant metadata are provided via OAI-PMH protocol to the National Metadata Directory (NMA).",
-    "crumbs": [
-      "Metadata"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html",
-    "href": "docs/deposition/index.html",
-    "title": "Deposition mechanism",
-    "section": "",
-    "text": "First of all, let us remind this repository is only for institutions, not for private collectors. As an institution, contact the maintainer and request for joining. We will help you with JACQ/GBIF communication and prepare your account in the repository system. The process later is described bellow.",
-    "crumbs": [
-      "Deposition"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html#image-upload-procedure",
-    "href": "docs/deposition/index.html#image-upload-procedure",
-    "title": "Deposition mechanism",
-    "section": "Image Upload Procedure",
-    "text": "Image Upload Procedure\nYou will receive remote S3 storage access credentials from us, with a bucket (“folder”) named herbarium-XYZ where XYZ means international acronym according tot he Index Herbariorum. If you haven’t heard about S3, think of it as a remote disk, or something similar to an FTP server. A list of supported clients and instructions can be found in the CESNET Object Storage S3 documentation, for Linux users might be CrossFTP an option.\nOnce all settled, upload your image files to the provided S3 bucket. The upload can run overnight or in the background if needed; you will find your optimal frequency and strategy to fit your digitization process.\nAfter the upload is complete, you will interact with the web interface of the repository and provide a few additional metadata fields that apply to all images in the batch (all uploaded files are taken as a single batch). Once this step is completed and you confirm import, the images will begin processing. During processing, files are removed from your S3 storage and transferred to our internal system, checked and stored.",
-    "crumbs": [
-      "Deposition"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html#image-requirements",
-    "href": "docs/deposition/index.html#image-requirements",
-    "title": "Deposition mechanism",
-    "section": "Image Requirements",
-    "text": "Image Requirements\nFormat: TIFF (.tif), preferably the original, unedited version. It should retain EXIF metadata (e.g., information about the camera or scanner). Correct DPI values are desirable but not mandatory.\nBarcode: Each image must contain a machine-readable barcode that matches an agreed pattern. The exact pattern for your institution will be arranged individually.\nIf no barcode is found in the image, a filenameFallback option can be enabled. In this case, the system will derive the specimen identifier from the filename, according to a pre-agreed pattern tailored for your use as above.\nMultiple Barcodes (Multiplier): If multiple barcodes are detected in a single image, the system throw an error. In case you will use multiplier for a batch, it will i) require to be more than one valid barcode present (to make the process more predictable) and ii) duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input.",
-    "crumbs": [
-      "Deposition"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html#validity-checks",
-    "href": "docs/deposition/index.html#validity-checks",
-    "title": "Deposition mechanism",
-    "section": "Validity checks",
-    "text": "Validity checks\nBeside the logic of specimen ID identification and fit to herbarium the user works in, the system checks for:\n\nfilesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB.\nuniqueness in scope of individual specimens (you cannot upload identical image to a single specimen twice, but an identical photo can be uploaded to different specimens ID)\nexistence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g. JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not a publishing it.",
-    "crumbs": [
-      "Deposition"
     ]
   },
   {
