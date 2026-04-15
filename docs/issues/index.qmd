@@ -3,3 +3,5 @@ title: "Issues and support"
 ---
 
 HERBIO is a pilot repository under active development. Please be active in commenting the concept, providing feedback and development proposals. You can do it via [GitHub](https://github.com/biodiversity-cz) issues for individual codebases, or via email to [Patrik Mráz](mailto:mrazp@natur.cuni.cz) and [Petr Novotný](mailto:novotp@natur.cuni.cz).
+
+For standard users' questions and issues, please use our ticketing system via email [helpdesk-biodiv@e-infra.cz](mailto:helpdesk-biodiv@e-infra.cz).
