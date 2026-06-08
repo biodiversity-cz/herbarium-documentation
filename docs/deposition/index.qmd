@@ -38,6 +38,7 @@ There are two levels of specimen validity check with several options:
 2) herbarium level check - an individual pattern (varying in content and strictness), so called "regular expression" is set in cooperation of herbarium curator and repository administrator. This pattern is used to check the validity of the ID, can be changed in future (to allow processing of another batch of images e.g.). There is one regular expression for barcodes detected on the image, and one for the filename.
 
 Options (set on/off by the curator in the web interface):
+
 - *filenameFallback* - if no barcode is found in the image, the system will derive the specimen identifier from the filename. OFF in the default configuration (= filename has not relevance to the specimen identification by default).
 - *multiplier* - if multiple barcodes are detected in a single image, the system will duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input. OFF in the default configuration (= no multiplying by default).
 - *acronymMustBePresent* - a presence of international herbarium acronym at the start of the specimenID is expected. For regional museums, having often IDs like "B 00123", turning off this option allow relax such expectation. ON in the default configuration (= the international acronym is required).
