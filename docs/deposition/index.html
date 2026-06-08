@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Deposition mechanism – Herbarium Documentation</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -33,15 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../docs/metadata/OAI-PMH.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-94d382b5b8973f9a0c6ce27af07cf4b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-8c9e79bb48dd7b9a8ecf62ad4c427352.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -240,10 +242,19 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="validity-checks">Validity checks</h2>
 <p>Beside the logic of <em>specimen ID</em> identification and fit to herbarium the user works in, the system checks for:</p>
 <ul>
-<li>filesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB.</li>
+<li>filesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB. Lossless LZA compression is recommended.</li>
 <li>uniqueness in scope of individual specimens (you cannot upload identical image to a single specimen twice, but an identical photo can be uploaded to different specimens ID)</li>
-<li>existence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g.&nbsp;JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not a publishing it.</li>
+<li>existence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g.&nbsp;JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not publishing it.</li>
 </ul>
+</section>
+<section id="specimen-id-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="specimen-id-requirements">Specimen ID requirements</h2>
+<p>There are two levels of specimen validity check with several options:</p>
+<ol type="1">
+<li>system-wide check - specimen ID can be any string, only so called “whitespace characters” are limited to regular space. This space cannot be used at the beginning or end of the ID, or between two digits. Multiplied spaces (one next to another) are not allowed. Since the repository assign <a href="https://arks.org/about/">ARK PID</a> to the specimens, these PIDs are used as URLs. To prevent confusion and misbehavior, ARKs are build from webalized form of the specimenID (all non-alphanumeric characters are replaced with dashes). In a very specific (or rather obscure) situation, this can lead to joining two independent specimens of herbarium into single ARK.</li>
+<li>herbarium level check - an individual pattern (varying in content and strictness), so called “regular expression” is set in cooperation of herbarium curator and repository administrator. This pattern is used to check the validity of the ID, can be changed in future (to allow processing of another batch of images e.g.). There is one regular expression for barcodes detected on the image, and one for the filename.</li>
+</ol>
+<p>Options (set on/off by the curator in the web interface): - <em>filenameFallback</em> - if no barcode is found in the image, the system will derive the specimen identifier from the filename. OFF in the default configuration (= filename has not relevance to the specimen identification by default). - <em>multiplier</em> - if multiple barcodes are detected in a single image, the system will duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input. OFF in the default configuration (= no multiplying by default). - <em>acronymMustBePresent</em> - a presence of international herbarium acronym at the start of the specimenID is expected. For regional museums, having often IDs like “B 00123”, turning off this option allow relax such expectation. ON in the default configuration (= the international acronym is required).</p>
 
 
 </section>

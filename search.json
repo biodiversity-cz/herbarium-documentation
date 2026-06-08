@@ -10,66 +10,6 @@
     ]
   },
   {
-    "objectID": "docs/metadata/index.html",
-    "href": "docs/metadata/index.html",
-    "title": "Metadata",
-    "section": "",
-    "text": "This repository is based on linked-data approach. Data about specimen (taxon, locality, collector etc.) are not stored in, but comes from external authority JACQ. These linked data are harvested regularly to allow us serve a complete information about the photos stored, nevertheless this distributed architecture can lead to a time delay of dataflow. To be sure about up-to-date information about the specimen itself, please follow the related resource metadata of individual photos.\nAll relevant metadata are provided via OAI-PMH protocol to the National Metadata Directory (NMA).",
-    "crumbs": [
-      "Metadata"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html",
-    "href": "docs/deposition/index.html",
-    "title": "Deposition mechanism",
-    "section": "",
-    "text": "First of all, let us remind this repository is only for institutions, not for private collectors. As an institution, contact the maintainer and request for joining. We will help you with JACQ/GBIF communication and prepare your account in the repository system. The process later is described bellow.",
-    "crumbs": [
-      "Deposition mechanism"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html#image-upload-procedure",
-    "href": "docs/deposition/index.html#image-upload-procedure",
-    "title": "Deposition mechanism",
-    "section": "Image Upload Procedure",
-    "text": "Image Upload Procedure\nYou will receive remote S3 storage access credentials from us, with a bucket (“folder”) named herbarium-XYZ where XYZ means international acronym according tot he Index Herbariorum. If you haven’t heard about S3, think of it as a remote disk, or something similar to an FTP server. A list of supported clients and instructions can be found in the CESNET Object Storage S3 documentation, for Linux users might be CrossFTP an option.\nOnce all settled, upload your image files to the provided S3 bucket. The upload can run overnight or in the background if needed; you will find your optimal frequency and strategy to fit your digitization process.\nAfter the upload is complete, you will interact with the web interface of the repository and provide a few additional metadata fields that apply to all images in the batch (all uploaded files are taken as a single batch). Once this step is completed and you confirm import, the images will begin processing. During processing, files are removed from your S3 storage and transferred to our internal system, checked and stored.",
-    "crumbs": [
-      "Deposition mechanism"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html#image-requirements",
-    "href": "docs/deposition/index.html#image-requirements",
-    "title": "Deposition mechanism",
-    "section": "Image Requirements",
-    "text": "Image Requirements\nFormat: TIFF (.tif), preferably the original, unedited version. It should retain EXIF metadata (e.g., information about the camera or scanner). Correct DPI values are desirable but not mandatory.\nBarcode: Each image must contain a machine-readable barcode that matches an agreed pattern. The exact pattern for your institution will be arranged individually.\nIf no barcode is found in the image, a filenameFallback option can be enabled. In this case, the system will derive the specimen identifier from the filename, according to a pre-agreed pattern tailored for your use as above.\nMultiple Barcodes (Multiplier): If multiple barcodes are detected in a single image, the system throw an error. In case you will use multiplier for a batch, it will i) require to be more than one valid barcode present (to make the process more predictable) and ii) duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input.",
-    "crumbs": [
-      "Deposition mechanism"
-    ]
-  },
-  {
-    "objectID": "docs/deposition/index.html#validity-checks",
-    "href": "docs/deposition/index.html#validity-checks",
-    "title": "Deposition mechanism",
-    "section": "Validity checks",
-    "text": "Validity checks\nBeside the logic of specimen ID identification and fit to herbarium the user works in, the system checks for:\n\nfilesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB.\nuniqueness in scope of individual specimens (you cannot upload identical image to a single specimen twice, but an identical photo can be uploaded to different specimens ID)\nexistence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g. JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not a publishing it.",
-    "crumbs": [
-      "Deposition mechanism"
-    ]
-  },
-  {
-    "objectID": "docs/legal/index.html",
-    "href": "docs/legal/index.html",
-    "title": "Terms and conditions for users of herbarium.biodiversity.cz (HERBIO)",
-    "section": "",
-    "text": "Only data directly generated by digitalization of herbarium specimens are allowed to be deposited in the HERBIO. Any data that does not fall within this category will be removed without warning and will result in a permanent ban of the user from making further deposition in the HERBIO. In the case of illegal material, the relevant authorities will be notified.\nA record is defined as the set of deposited image file and deposited metadata. Although the record can be in various states, this does not change the which rules apply to them, with the exception that the License is not applied until the record is published.\nDepositors agrees that HERBIO can distribute the users’ records under the CC-BY 4.0 Attribution, i.e., the user agrees to place their work in the public domain.\nEvery person involved with the record is responsible for the record being correct (defined is not-fraudulent and containing non-allowed data), this extent to the HERBIO members. The principal contact and depositor as well as HERBIO members are obliged to keep their contact information updated in case doubt arises. Failure of correctness or contact information can in worst case lead to deletion of the record and permanent banning from making depositions. In the case of HERBIO members termination of any rights they may have within the HERBIO and permanent banning from participating in any form.\nEvery person involved in generation and deposition of the data must agree on being associated with the record and agree that the data can be placed in the public domain.\nUsers have the right to request deletion of their record. However, as the data is in the public domain, this in practice only means that HERBIO will seize to distribute the data. HERBIO has no rights too interfere with data downloaded prior to deletion, including redistribution. Furthermore, minimal metadata cannot be deleted. A note that the user requested deletion of the record will be present on the record landing page.\nUsers are only allowed to deposit work they have been directly involved with the herbarium they are delegated to work on.\nSanctions for fraudulent behaviour include:\n\nForced alteration of record.\nDeletion of record with the note that it was deleted due to fraudulence.\nPermanent banning of one or all of the depositors from depositing within the HERBIO.\nHERBIO will attempt to notify all users of the data of it’s fraudulence, including Journal publishers.\nHERBIO will notify the relevant legal authorities, including the employers of one or all of the depositors.\n\nHERBIO are allowed to change the records by following the procedures set out by the steering committee.",
-    "crumbs": [
-      "Terms and conditions"
-    ]
-  },
-  {
     "objectID": "docs/services/download.html",
     "href": "docs/services/download.html",
     "title": "Download and services",
@@ -110,13 +50,53 @@
     ]
   },
   {
-    "objectID": "docs/introduction/index.html",
-    "href": "docs/introduction/index.html",
-    "title": "Introduction",
+    "objectID": "docs/deposition/index.html",
+    "href": "docs/deposition/index.html",
+    "title": "Deposition mechanism",
     "section": "",
-    "text": "EOSC\nNRP\nbiodiversity.cz\nherbarium.biodiversity.cz",
+    "text": "First of all, let us remind this repository is only for institutions, not for private collectors. As an institution, contact the maintainer and request for joining. We will help you with JACQ/GBIF communication and prepare your account in the repository system. The process later is described bellow.",
     "crumbs": [
-      "Introduction"
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html#image-upload-procedure",
+    "href": "docs/deposition/index.html#image-upload-procedure",
+    "title": "Deposition mechanism",
+    "section": "Image Upload Procedure",
+    "text": "Image Upload Procedure\nYou will receive remote S3 storage access credentials from us, with a bucket (“folder”) named herbarium-XYZ where XYZ means international acronym according tot he Index Herbariorum. If you haven’t heard about S3, think of it as a remote disk, or something similar to an FTP server. A list of supported clients and instructions can be found in the CESNET Object Storage S3 documentation, for Linux users might be CrossFTP an option.\nOnce all settled, upload your image files to the provided S3 bucket. The upload can run overnight or in the background if needed; you will find your optimal frequency and strategy to fit your digitization process.\nAfter the upload is complete, you will interact with the web interface of the repository and provide a few additional metadata fields that apply to all images in the batch (all uploaded files are taken as a single batch). Once this step is completed and you confirm import, the images will begin processing. During processing, files are removed from your S3 storage and transferred to our internal system, checked and stored.",
+    "crumbs": [
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html#image-requirements",
+    "href": "docs/deposition/index.html#image-requirements",
+    "title": "Deposition mechanism",
+    "section": "Image Requirements",
+    "text": "Image Requirements\nFormat: TIFF (.tif), preferably the original, unedited version. It should retain EXIF metadata (e.g., information about the camera or scanner). Correct DPI values are desirable but not mandatory.\nBarcode: Each image must contain a machine-readable barcode that matches an agreed pattern. The exact pattern for your institution will be arranged individually.\nIf no barcode is found in the image, a filenameFallback option can be enabled. In this case, the system will derive the specimen identifier from the filename, according to a pre-agreed pattern tailored for your use as above.\nMultiple Barcodes (Multiplier): If multiple barcodes are detected in a single image, the system throw an error. In case you will use multiplier for a batch, it will i) require to be more than one valid barcode present (to make the process more predictable) and ii) duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input.",
+    "crumbs": [
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html#validity-checks",
+    "href": "docs/deposition/index.html#validity-checks",
+    "title": "Deposition mechanism",
+    "section": "Validity checks",
+    "text": "Validity checks\nBeside the logic of specimen ID identification and fit to herbarium the user works in, the system checks for:\n\nfilesize larger than 5MB to prevent some obvious thumbs to be imported. The upper quota is not set, but a general expectation is that a single image should not exceed 600MB. Lossless LZA compression is recommended.\nuniqueness in scope of individual specimens (you cannot upload identical image to a single specimen twice, but an identical photo can be uploaded to different specimens ID)\nexistence of external authority PID holding information about the specimen (taxon, locality etc.). The repository itself does not stores these data, it overtakes them from e.g. JACQ. A missing/non-detectable PID in JACQ will allow you to import a photo, but not publishing it.",
+    "crumbs": [
+      "Deposition mechanism"
+    ]
+  },
+  {
+    "objectID": "docs/deposition/index.html#specimen-id-requirements",
+    "href": "docs/deposition/index.html#specimen-id-requirements",
+    "title": "Deposition mechanism",
+    "section": "Specimen ID requirements",
+    "text": "Specimen ID requirements\nThere are two levels of specimen validity check with several options:\n\nsystem-wide check - specimen ID can be any string, only so called “whitespace characters” are limited to regular space. This space cannot be used at the beginning or end of the ID, or between two digits. Multiplied spaces (one next to another) are not allowed. Since the repository assign ARK PID to the specimens, these PIDs are used as URLs. To prevent confusion and misbehavior, ARKs are build from webalized form of the specimenID (all non-alphanumeric characters are replaced with dashes). In a very specific (or rather obscure) situation, this can lead to joining two independent specimens of herbarium into single ARK.\nherbarium level check - an individual pattern (varying in content and strictness), so called “regular expression” is set in cooperation of herbarium curator and repository administrator. This pattern is used to check the validity of the ID, can be changed in future (to allow processing of another batch of images e.g.). There is one regular expression for barcodes detected on the image, and one for the filename.\n\nOptions (set on/off by the curator in the web interface): - filenameFallback - if no barcode is found in the image, the system will derive the specimen identifier from the filename. OFF in the default configuration (= filename has not relevance to the specimen identification by default). - multiplier - if multiple barcodes are detected in a single image, the system will duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input. OFF in the default configuration (= no multiplying by default). - acronymMustBePresent - a presence of international herbarium acronym at the start of the specimenID is expected. For regional museums, having often IDs like “B 00123”, turning off this option allow relax such expectation. ON in the default configuration (= the international acronym is required).",
+    "crumbs": [
+      "Deposition mechanism"
     ]
   },
   {
@@ -131,14 +111,13 @@
     ]
   },
   {
-    "objectID": "docs/introduction/10.html",
-    "href": "docs/introduction/10.html",
-    "title": "Software used in Czech herbaria",
+    "objectID": "docs/metadata/index.html",
+    "href": "docs/metadata/index.html",
+    "title": "Metadata",
     "section": "",
-    "text": "JACQ\nMuseion\nDEMUS\nHerbman\n?Bach\nZlínský kraj",
+    "text": "This repository is based on linked-data approach. Data about specimen (taxon, locality, collector etc.) are not stored in, but comes from external authority JACQ. These linked data are harvested regularly to allow us serve a complete information about the photos stored, nevertheless this distributed architecture can lead to a time delay of dataflow. To be sure about up-to-date information about the specimen itself, please follow the related resource metadata of individual photos.\nAll relevant metadata are provided via OAI-PMH protocol to the National Metadata Directory (NMA).",
     "crumbs": [
-      "Introduction",
-      "Software used in Czech herbaria"
+      "Metadata"
     ]
   },
   {
@@ -149,13 +128,13 @@
     "text": "The repository follows GDPR rules following the e-infra standards"
   },
   {
-    "objectID": "docs/issues/index.html",
-    "href": "docs/issues/index.html",
-    "title": "Issues and support",
+    "objectID": "docs/legal/index.html",
+    "href": "docs/legal/index.html",
+    "title": "Terms and conditions for users of herbarium.biodiversity.cz (HERBIO)",
     "section": "",
-    "text": "HERBIO is a pilot repository under active development. Please be active in commenting the concept, providing feedback and development proposals. You can do it via GitHub issues for individual codebases, or via email to Patrik Mráz and Petr Novotný.\nFor standard users’ questions and issues, please use our ticketing system via email helpdesk-biodiv@e-infra.cz.",
+    "text": "Only data directly generated by digitalization of herbarium specimens are allowed to be deposited in the HERBIO. Any data that does not fall within this category will be removed without warning and will result in a permanent ban of the user from making further deposition in the HERBIO. In the case of illegal material, the relevant authorities will be notified.\nA record is defined as the set of deposited image file and deposited metadata. Although the record can be in various states, this does not change the which rules apply to them, with the exception that the License is not applied until the record is published.\nDepositors agrees that HERBIO can distribute the users’ records under the CC-BY 4.0 Attribution, i.e., the user agrees to place their work in the public domain.\nEvery person involved with the record is responsible for the record being correct (defined is not-fraudulent and containing non-allowed data), this extent to the HERBIO members. The principal contact and depositor as well as HERBIO members are obliged to keep their contact information updated in case doubt arises. Failure of correctness or contact information can in worst case lead to deletion of the record and permanent banning from making depositions. In the case of HERBIO members termination of any rights they may have within the HERBIO and permanent banning from participating in any form.\nEvery person involved in generation and deposition of the data must agree on being associated with the record and agree that the data can be placed in the public domain.\nUsers have the right to request deletion of their record. However, as the data is in the public domain, this in practice only means that HERBIO will seize to distribute the data. HERBIO has no rights too interfere with data downloaded prior to deletion, including redistribution. Furthermore, minimal metadata cannot be deleted. A note that the user requested deletion of the record will be present on the record landing page.\nUsers are only allowed to deposit work they have been directly involved with the herbarium they are delegated to work on.\nSanctions for fraudulent behaviour include:\n\nForced alteration of record.\nDeletion of record with the note that it was deleted due to fraudulence.\nPermanent banning of one or all of the depositors from depositing within the HERBIO.\nHERBIO will attempt to notify all users of the data of it’s fraudulence, including Journal publishers.\nHERBIO will notify the relevant legal authorities, including the employers of one or all of the depositors.\n\nHERBIO are allowed to change the records by following the procedures set out by the steering committee.",
     "crumbs": [
-      "Issues and support"
+      "Terms and conditions"
     ]
   },
   {
@@ -222,6 +201,37 @@
     "crumbs": [
       "Metadata",
       "OAI-PMH v2.0 Compliance"
+    ]
+  },
+  {
+    "objectID": "docs/introduction/index.html",
+    "href": "docs/introduction/index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "EOSC\nNRP\nbiodiversity.cz\nherbarium.biodiversity.cz",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "docs/introduction/10.html",
+    "href": "docs/introduction/10.html",
+    "title": "Software used in Czech herbaria",
+    "section": "",
+    "text": "JACQ\nMuseion\nDEMUS\nHerbman\n?Bach\nZlínský kraj",
+    "crumbs": [
+      "Introduction",
+      "Software used in Czech herbaria"
+    ]
+  },
+  {
+    "objectID": "docs/issues/index.html",
+    "href": "docs/issues/index.html",
+    "title": "Issues and support",
+    "section": "",
+    "text": "HERBIO is a pilot repository under active development. Please be active in commenting the concept, providing feedback and development proposals. You can do it via GitHub issues for individual codebases, or via email to Patrik Mráz and Petr Novotný.\nFor standard users’ questions and issues, please use our ticketing system via email helpdesk-biodiv@e-infra.cz.",
+    "crumbs": [
+      "Issues and support"
     ]
   }
 ]
