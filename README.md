@@ -9,6 +9,11 @@ quarto publish gh-pages #not needed, provided by GA CI after push
 ```
 
 [//]: # (obligatory branding for EOSC.CZ)
+<p style="text-align: center">
+  <img src="images/biodiversity_cz.svg" alt="biodiversity.cz" width="400">
+</p>
+
+
 <hr style="margin-top: 100px; margin-bottom: 20px">
 
 <p style="text-align: left"> <img src="https://webcentrum.muni.cz/media/3831863/seda_eosc.png" alt="EOSC CZ Logo" height="90"> </p>

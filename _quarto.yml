@@ -18,7 +18,7 @@ website:
     left: "CC-BY Biodiversity.cz, 2025"
 
   sidebar:
-    logo: "images/logo.png"
+    logo: "images/biodiversity_cz.svg"
     pinned: true
     align: center
     tools:
