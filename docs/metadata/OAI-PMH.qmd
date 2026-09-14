@@ -34,9 +34,9 @@ title: "OAI-PMH v2.0 Compliance"
     - **dc:rights**: License information
 
 ### CCMM Format - Mandatory Format
-- **Prefix**: `ccmm`
-- **Namespace**: `https://github.com/techlib/CCMM`
-- **Schema**: `https://techlib.github.io/CCMM/dataset/schema.xsd`
+- **Prefix**: `ccmm-xml`
+- **Namespace**: `https://schema.ccmm.cz/research-data/1.1`
+- **Schema**: `https://model.ccmm.cz/research-data/dataset/schema.xsd`
 
 ## 3. Sets Implementation
 
