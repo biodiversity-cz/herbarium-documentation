@@ -318,20 +318,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="listidentifiers" class="level4">
 <h4 class="anchored" data-anchor-id="listidentifiers">4. ListIdentifiers</h4>
 <p>Lists record identifiers with optional filtering.</p>
-<pre><code>GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=oai_dc
-GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=oai_dc&amp;from=2023-01-01
-GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=oai_dc&amp;set=PRC</code></pre>
+<pre><code>GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=ccmm-xml
+GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=ccmm-xml&amp;from=2025-01-01
+GET /oai-pmh?verb=ListIdentifiers&amp;metadataPrefix=ccmm-xml&amp;set=PRC</code></pre>
 </section>
 <section id="listrecords" class="level4">
 <h4 class="anchored" data-anchor-id="listrecords">5. ListRecords</h4>
 <p>Lists complete records with optional filtering.</p>
-<pre><code>GET /oai-pmh?verb=ListRecords&amp;metadataPrefix=oai_dc
-GET /oai-pmh?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2023-01-01&amp;until=2023-12-31</code></pre>
+<pre><code>GET /oai-pmh?verb=ListRecords&amp;metadataPrefix=ccmm-xml
+GET /oai-pmh?verb=ListRecords&amp;metadataPrefix=ccmm-xml&amp;from=2023-01-01&amp;until=2025-12-31</code></pre>
 </section>
 <section id="getrecord" class="level4">
 <h4 class="anchored" data-anchor-id="getrecord">6. GetRecord</h4>
 <p>Retrieves a single record by identifier.</p>
-<pre><code>GET /oai-pmh?verb=GetRecord&amp;identifier=oai:domain:photo-123&amp;metadataPrefix=oai_dc</code></pre>
+<pre><code>GET /oai-pmh?verb=GetRecord&amp;identifier=oai:herbarium.biodiversity.cz:ark:/12661/nrp1HERB/PRC/123456&amp;metadataPrefix=ccmm-xml</code></pre>
 
 
 </section>
