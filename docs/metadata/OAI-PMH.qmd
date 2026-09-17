@@ -88,23 +88,23 @@ GET /oai-pmh?verb=ListSets
 Lists record identifiers with optional filtering.
 
 ```
-GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc
-GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&from=2023-01-01
-GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=oai_dc&set=PRC
+GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=ccmm-xml
+GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=ccmm-xml&from=2025-01-01
+GET /oai-pmh?verb=ListIdentifiers&metadataPrefix=ccmm-xml&set=PRC
 ```
 
 #### 5. ListRecords
 Lists complete records with optional filtering.
 
 ```
-GET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc
-GET /oai-pmh?verb=ListRecords&metadataPrefix=oai_dc&from=2023-01-01&until=2023-12-31
+GET /oai-pmh?verb=ListRecords&metadataPrefix=ccmm-xml
+GET /oai-pmh?verb=ListRecords&metadataPrefix=ccmm-xml&from=2023-01-01&until=2025-12-31
 ```
 
 #### 6. GetRecord
 Retrieves a single record by identifier.
 
 ```
-GET /oai-pmh?verb=GetRecord&identifier=oai:domain:photo-123&metadataPrefix=oai_dc
+GET /oai-pmh?verb=GetRecord&identifier=oai:herbarium.biodiversity.cz:ark:/12661/nrp1HERB/PRC/123456&metadataPrefix=ccmm-xml
 ```
 
