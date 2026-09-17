@@ -41,5 +41,5 @@ Options (set on/off by the curator in the web interface):
 
 - *filenameFallback* - if no barcode is found in the image, the system will derive the specimen identifier from the filename. OFF in the default configuration (= filename has not relevance to the specimen identification by default).
 - *multiplier* - if multiple barcodes are detected in a single image, the system will duplicate the image for each corresponding ID rather than reporting an error and requiring manual ID input. OFF in the default configuration (= no multiplying by default).
-- *acronymMustBePresent* - a presence of international herbarium acronym at the start of the specimenID is expected. For regional museums, having often IDs like "B 00123", turning off this option allow relax such expectation. ON in the default configuration (= the international acronym is required).
-- *alwaysTrailingZeros* - trailing zeros are added only to strictly numeric IDs. If herbarium want to have these zeros even in case of mixed IDs (like 00123b), this is the option; changeable only by superuser.
+- *acronymMustBePresent* - a presence of international herbarium acronym at the start of the specimenID is expected. For regional museums, often having IDs like “B 00123”, turning off this option relaxes such expectations. ON in the default configuration (= the international acronym is required).
+- *alwaysTrailingZeros* - trailing zeros are added only to strictly numeric IDs. If herbarium wants to have these zeros even in case of mixed IDs (like 00123b), this is the option; changeable only by superuser.
